@@ -21,7 +21,7 @@ padding:0;
 }
 
 button {
-  margin: 0;
+  margin: 30px;
   padding: 3%;
   text-decoration: none;
 }
@@ -77,10 +77,6 @@ a {
 
 nav.nav {
   margin: 3%;
-}
-
-html {
-  display: block;
 }
 
 div {
