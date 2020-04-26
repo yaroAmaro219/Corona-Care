@@ -1,4 +1,4 @@
-import React, { Component, Profiler } from 'react';
+import React, { Component } from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import Register from './components/Register'
@@ -88,7 +88,7 @@ class App extends Component {
   handleLogin = async () => {
     const currentUser = await loginUser(this.state.authFormData);
     this.setState({ currentUser: currentUser })
-    this.props.history.push("/decision")
+    this.props.history.push("/home")
   }
 
   handleRegister = async (e) => {
@@ -204,8 +204,7 @@ class App extends Component {
             />
           )}/>
         </Switch> 
-        {/* <Footer /> */}
-      </div>
+        </div>
     );
   }
 }

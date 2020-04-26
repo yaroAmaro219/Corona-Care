@@ -5,7 +5,6 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <img src="images/logo.svg" class="top-logo"/>
         <img src="images/shoppingman.svg" class="top-img"/>
         <div class="text-1">
           Connection, cooperation, compassion.
@@ -16,10 +15,10 @@ export default class Home extends Component {
           helping hand with chores like grocery delivery and build
           a lasting connection.
         </div>
-        <img src="images/ineedhelp.svg" class="rectangle-1"/>
-        <img src="images/iwanttohelp.svg" class="rectangle-2"/>
-        <img src="images/bottom.svg" class="bottom-group"/>
-        <!--<Link to="decision"><p class="start">Let's get started</p></Link>-->
+        {/* <img src="images/ineedhelp.svg" class="rectangle-1"/>
+        <img src="images/iwanttohelp.svg" class="rectangle-2"/> */}
+        {/* <img src="images/bottom.svg" class="bottom-group"/> */}
+        {/* <Link to="decision"><p class="start">Let's get started</p></Link> */}
       </div>
     )
   }

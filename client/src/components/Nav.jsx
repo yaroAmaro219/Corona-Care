@@ -14,13 +14,14 @@ class Nav extends Component {
         <nav>
           <div class="header">
               <a href="/decision">
-              <h1>COCA</h1>
+              <img src="images/logo.svg" class="top-logo"/>
             </a>
             {this.props.currentUser
               ?
               <div class="nav">
+                
                 <nav class="nav">
-                  <a class="link" href="/decision">Home</a>
+                  <a class="link" href="/home">Home</a>
                   <a class="link" href="/about">About</a>
                   <a class="link" href="/profile">Profile</a>
                   <a class="link" href="/contact">Contact</a>
