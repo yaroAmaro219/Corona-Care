@@ -30,7 +30,7 @@ class App extends Component {
 
     this.state = {
       currentUser: null,
-      registerData: {
+      registerFormData: {
         first_name: "",
         age: true,
         email: "",
@@ -115,6 +115,17 @@ class App extends Component {
     }));
   }
 
+  registerHandleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState(prevState => ({
+      registerFormData: {
+        ...prevState.registerFormData,
+        [name]: value
+      }
+    }));
+  }
+  
+
   handleChange = (e) => {
     const value = e.target.value;
     this.setState({
@@ -149,8 +160,8 @@ class App extends Component {
           <Route exact path="/register" render={(props) => (
             <Register
               handleRegister={this.handleRegister}
-              handleChange={this.authHandleChange}
-              formData={this.state.authFormData} />)} />
+              handleChange={this.registerHandleChange}
+              formData={this.state.registerFormData} />)} />
           <Route exact path="/decision" render={(props) => (
             <Decision
             />)} />
@@ -170,7 +181,7 @@ class App extends Component {
           )} />
           <Route exact path="/profile" render={(props) => (
             <Profile
-              user={this.state.authFormData}
+              user={this.state.registerFormData}
             />
           )}/>
           <Route exact path="/contact" render={(props) => (

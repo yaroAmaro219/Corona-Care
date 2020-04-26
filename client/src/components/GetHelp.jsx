@@ -62,7 +62,8 @@ class GetHelp extends Component {
           <Link to="/submit"><button
             onClick={(e) => {
               this.props.addPost(
-                this.props.match.params.id,
+                // this.props.match.params.id,
+                1,
                 this.state.name, this.state.title, this.state.content, this.state.user_id)
             }}
           >Submit</button></Link>

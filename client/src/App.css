@@ -49,12 +49,15 @@ padding:0;
 }
 
 button {
+  /* justify-content: center; */
   /* display: flex;
-  flex-direction: row; */
+  flex-direction: column; */
   /* margin: 2%;
   padding: 2%; */
   text-decoration: none;
-  /* width: 10%; */
+  width: 10%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .post {
