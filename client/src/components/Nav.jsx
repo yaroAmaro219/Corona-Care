@@ -17,7 +17,11 @@ class Nav extends Component {
           {this.props.currentUser
             ?
             <div class="nav">
-              <nav class="nav">
+                <nav class="nav">
+                  <p>Hello,
+                    {this.props.formData
+                    &&
+                    this.first_name}</p>
                 <a class="link" href="/decision">Home</a>
                 <a class="link" href="/about">About</a>
                 <a class="link" href="/profile">Profile</a>
