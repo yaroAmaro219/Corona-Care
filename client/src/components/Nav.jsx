@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-
 class Nav extends Component {
   constructor(props) {
     super(props);
@@ -11,33 +10,32 @@ class Nav extends Component {
   render() {
     return (
       <div>
+
         <nav>
           <div class="header">
-          <a href="/decision"><h1>COCA</h1></a>
-          {this.props.currentUser
-            ?
-            <div class="nav">
+              <a href="/decision">
+              <h1>COCA</h1>
+            </a>
+            {this.props.currentUser
+              ?
+              <div class="nav">
                 <nav class="nav">
-                  <p>Hello,
-                    {this.props.formData
-                    &&
-                    this.first_name}</p>
-                <a class="link" href="/decision">Home</a>
-                <a class="link" href="/about">About</a>
-                <a class="link" href="/profile">Profile</a>
-                <a class="link" href="/contact">Contact</a>
-                <button onClick={this.props.handleLogout}>Logout</button>
-              </nav>
-            </div>
-            :
-            <a href="/login">Login</a>
+                  <a class="link" href="/decision">Home</a>
+                  <a class="link" href="/about">About</a>
+                  <a class="link" href="/profile">Profile</a>
+                  <a class="link" href="/contact">Contact</a>
+                  <button onClick={this.props.handleLogout}>Logout</button>
+                </nav>
+              </div>
+              :
+              <a href="/login">Login</a>
             }
-            </div>
+          </div>
         </nav>
       </div>
     )
   }
 }
-  
+
 export default Nav;
 
