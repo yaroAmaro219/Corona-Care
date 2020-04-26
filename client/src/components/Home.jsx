@@ -5,8 +5,21 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Welcome</h1>
-        <Link to="decision"><p class="start">Let's get started</p></Link> 
+        <img src="images/logo.svg" class="top-logo"/>
+        <img src="images/shoppingman.svg" class="top-img"/>
+        <div class="text-1">
+          Connection, cooperation, compassion.
+        </div>
+        <div class="text-2">
+          Co-Care is all about getting closer to your neighbors.
+          Reach out to someone for a conversation or to request a
+          helping hand with chores like grocery delivery and build
+          a lasting connection.
+        </div>
+        <img src="images/ineedhelp.svg" class="rectangle-1"/>
+        <img src="images/iwanttohelp.svg" class="rectangle-2"/>
+        <img src="images/bottom.svg" class="bottom-group"/>
+        <!--<Link to="decision"><p class="start">Let's get started</p></Link>-->
       </div>
     )
   }
