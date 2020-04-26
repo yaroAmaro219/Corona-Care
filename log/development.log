@@ -2057,3 +2057,13 @@ Processing by AuthenticationController#verify as HTML
 Completed 200 OK in 57ms (Views: 0.4ms | ActiveRecord: 7.2ms | Allocations: 8677)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1546414464343317660)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1546414464343317660)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "age", "email", "location", "type_of_volunteer", "best_time", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Luke"], ["age", true], ["email", "hello@hello.com"], ["location", "Brooklyn"], ["type_of_volunteer", "Good"], ["best_time", "7PM"], ["created_at", "2020-04-26 12:24:04.761174"], ["updated_at", "2020-04-26 12:24:04.761174"], ["password_digest", "$2a$12$GgLZY75cTD7sT3ZCCJEiLOh0211o8XFM9X/wfhTCkMmQM7B5HyWgW"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
