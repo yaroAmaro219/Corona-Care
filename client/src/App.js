@@ -48,7 +48,7 @@ class App extends Component {
       name: '',
       title: '',
       content: '',
-      user_id: null,
+      user_id: 37,
       post: '',
     }
   }
@@ -126,12 +126,11 @@ class App extends Component {
   render() {
     return (
       <div class="app">
-        <p>Hello {this.state.authFormData.first_name}</p>
+        
         <Nav
           currentUser={this.state.currentUser}
           handleLogin={this.handleLogin}
           handleLogout={this.handleLogout}
-          formData={this.state.authFormData}
         />
         
         <Switch>
