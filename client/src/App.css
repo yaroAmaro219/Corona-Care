@@ -1,7 +1,9 @@
 div.app {
   min-height: 100%;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  text-align:center;
+
 }
 
 div.decision {
@@ -26,8 +28,6 @@ div.decision {
 }
 
 h1 {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   text-decoration: none;
   font-size: 30px;
@@ -35,8 +35,6 @@ h1 {
 }
 
 h2 {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
 }
 
@@ -53,10 +51,20 @@ padding:0;
 button {
   /* display: flex;
   flex-direction: row; */
-  margin: 2%;
-  padding: 2%;
+  /* margin: 2%;
+  padding: 2%; */
   text-decoration: none;
-  width: 10%;
+  /* width: 10%; */
+}
+
+.post {
+  display: flexbox;
+  text-align: center;
+  justify-content: center;
+  border: 2% black solid;
+  background-color: wheat;
+  text-transform: uppercase;
+  border-bottom: 5% black solid;
 }
 
 .login {

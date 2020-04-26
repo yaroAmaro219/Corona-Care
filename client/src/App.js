@@ -11,6 +11,7 @@ import Contact from './components/Contact'
 import Home from './components/Home'
 import Nav from './components/Nav'
 import Submit from './components/Submit'
+import Posts from './components/Posts'
 import Footer from './components/Footer'
 import './App.css';
 
@@ -23,16 +24,13 @@ import {
   showPost,
 } from './services/api-helper';
 
-
-
-
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       currentUser: null,
-      authFormData: {
+      registerData: {
         first_name: "",
         age: true,
         email: "",
@@ -41,26 +39,29 @@ class App extends Component {
         best_time: "doodle",
         password: ""
       },
-      loginFormData: {
+      authFormData: {
         email: '',
         password:''
       },
       name: '',
       title: '',
       content: '',
-      user_id: null,
+      user_id: '',
       post: '',
     }
   }
 
   componentDidMount = () => {
     this.handleVerify();
+    // this.getPost();
   }
 
-  getPost = async () => {
-    const post = await showPost();
-    this.setState({post})
-  }
+    getPost = async () => {
+      const post = await showPost();
+      // if (post) {
+      this.setState({ post });
+      // }
+    }
 
   addPost = async (id, name, title, content, user_id) => {
     const newPost = await postPost(id, {
@@ -85,14 +86,14 @@ class App extends Component {
   }
 
   handleLogin = async () => {
-    const currentUser = await loginUser(this.state.loginFormData);
+    const currentUser = await loginUser(this.state.authFormData);
     this.setState({ currentUser: currentUser })
     this.props.history.push("/decision")
   }
 
   handleRegister = async (e) => {
     e.preventDefault();
-    const currentUser = await registerUser(this.state.authFormData);
+    const currentUser = await registerUser(this.state.registerFormData);
     this.setState({ currentUser: currentUser })
     this.props.history.push("/decision")
   }
@@ -126,7 +127,7 @@ class App extends Component {
   render() {
     return (
       <div class="app">
-        <p>Hello {this.state.authFormData.first_name}</p>
+        {/* <p>Hello {this.state.authFormData.first_name}</p> */}
         <Nav
           currentUser={this.state.currentUser}
           handleLogin={this.handleLogin}
@@ -143,7 +144,8 @@ class App extends Component {
             <Login
               handleLogin={this.handleLogin}
               handleChange={this.authHandleChange}
-              formData={this.state.authFormData} />)} />
+              formData={this.state.authFormData}
+              {...props}/>)} />
           <Route exact path="/register" render={(props) => (
             <Register
               handleRegister={this.handleRegister}
@@ -179,6 +181,15 @@ class App extends Component {
           <Route exact path="/submit" render={(props) => (
             <Submit
               
+            />
+          )} />
+          <Route exact path="/posts" render={(props) => (
+            <Posts
+              {...props}
+              authFormData={this.state.authFormData}
+              post={this.state.post}
+              getPost={this.getPost}
+              showPost={this.showPost}
             />
           )}/>
         </Switch> 

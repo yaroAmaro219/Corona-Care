@@ -2,12 +2,12 @@ class PostsController < ApplicationController
   # before_action :set_post, only: [:show, :update, :destroy]
   before_action :authorize_request, only: [:create]
 
-  # # GET /posts
-  # def index
-  #   @posts = Post.all
+  # GET /posts
+  def index
+    @posts = Post.all
 
-  #   render json: @posts
-  # end
+    render json: @posts
+  end
 
   # # GET /posts/1
   # def show

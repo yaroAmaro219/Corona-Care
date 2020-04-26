@@ -6,6 +6,12 @@ const api = axios.create({
   baseURL: baseUrl
 });
 
+
+export const getUser = async () => {
+  const resp = await api.get('/users')
+  return resp.data
+}
+
 // ============ POST ============
 
 export const postPost = async (id, postData) => {
@@ -13,13 +19,18 @@ export const postPost = async (id, postData) => {
   return resp.data
 }
 
-export const showPost = async (id) => {
-  const resp = await api(`/users/${id}`)
+export const showPost = async () => {
+  const resp = await api.get(`/posts`)
+  return resp.data
+}
+
+export const putPost = async (id, postData) => {
+  const resp = await api.put(`/posts/${id}`, { post: postData })
   return resp.data
 }
 
 export const destroyPost = async (id) => {
-  const resp = await api.delete(`/courts/:id/reservations/${id}`)
+  const resp = await api.delete(`/users/:user_id/posts/${id}`)
   return resp.data
 }
 
