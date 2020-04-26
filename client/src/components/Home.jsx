@@ -6,7 +6,7 @@ export default class Home extends Component {
     return (
       <div>
         <h1>Welcome</h1>
-        <Link to="decision"><p>Let's get started</p></Link> 
+        <Link to="decision"><p class="start">Let's get started</p></Link> 
       </div>
     )
   }

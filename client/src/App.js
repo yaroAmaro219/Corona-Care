@@ -10,6 +10,7 @@ import Profile from './components/Profile'
 import Contact from './components/Contact'
 import Home from './components/Home'
 import Nav from './components/Nav'
+import Submit from './components/Submit'
 import Footer from './components/Footer'
 import './App.css';
 
@@ -136,6 +137,11 @@ class App extends Component {
           )}/>
           <Route exact path="/contact" render={(props) => (
             <Contact
+              
+            />
+          )}/>
+          <Route exact path="/submit" render={(props) => (
+            <Submit
               
             />
           )}/>

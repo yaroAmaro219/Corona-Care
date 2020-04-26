@@ -23,8 +23,8 @@ class Nav extends Component {
                 <a class="link" href="/service">Service</a>
                 <a class="link" href="/profile">Profile</a>
                 <a class="link" href="/contact">Contact</a>
+                <button onClick={this.props.handleLogout}>Logout</button>
               </nav>
-              <button onClick={this.props.handleLogout}>Logout</button>
             </div>
             :
             <button onClick={this.props.handleLogin}>Login</button>

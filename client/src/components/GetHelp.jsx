@@ -1,43 +1,54 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import DatePicker from 'react-date-picker'
 
- const GetHelp = () => {
+class GetHelp extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isAdd: false,
+      isEdit: false,
+      resForm: {
+        option: null,
+        extrainfo: ''
+      }
+    }
+  }
+
+
+  render() {
     return (
       <div class="help">
         <h1>What Do You Want Help With?</h1>
+        <div class="options">
         <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
+          <button class="dropbtn">Options</button>
           <div class="dropdown-content">
-              <a href="#">Groceries</a>
-              <a href="#">Medication Pick Up</a>
+            <a href="#">Groceries</a>
+            <a href="#">Medication Pick Up</a>
             <a href="#">Post Office</a>
             <a href="#">Someone To Talk To!</a>
           </div>
         </div>
-        
-        {/* let form = timeSlots.filter((time) => {
-      return this.props.reservation
-        &&
-        !this.props.reservation.reservations.map((res) => res.start_time).includes(time.start_time)
-    }).map((time) => (
-      <Form>
-        <div class="reservationForm">
-        <p class="time">
-            {time.start_time}
-            {'  to  '}
-          {time.end_time}
-        </p>
-        <input
-          name="name"
-          type="text"
-          onChange={this.props.handleChange} />
-        <button onClick={(e) => {
-          this.props.addReservation(this.props.match.params.id, time.start_time, time.end_time)
-          }}>Submit</button>
-        </div>  
-      </Form> */}
+
+          <form>
+            <p>Anything else you'd like your volunteer to know?</p>
+            <input
+              name="extrainfo"
+              type="text"
+              onChange={this.props.handleChange} />
+          <a href="/submit" ><button
+            // onClick={(e) => {
+            //   this.props.addPost(this.props.match.params.id)
+            // }}
+          >Submit</button></a>
+          </form>
+          </div>
       </div>
+   
     )
   }
+}
 
 
 export default GetHelp;
