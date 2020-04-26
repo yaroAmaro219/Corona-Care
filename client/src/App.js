@@ -7,6 +7,10 @@ import Decision from './components/Decision';
 import GetHelp from './components/GetHelp';
 import Volunteer from './components/Volunteer';
 import Profile from './components/Profile'
+import Contact from './components/Contact'
+import Home from './components/Home'
+import Nav from './components/Nav'
+import Footer from './components/Footer'
 import './App.css';
 
 import {
@@ -49,7 +53,7 @@ class App extends Component {
   }
 
   handleLogin = async () => {
-    const currentUser = await registerUser(this.state.authFormData);
+    const currentUser = await loginUser(this.state.authFormData);
     this.setState({ currentUser: currentUser })
     this.props.history.push("/decision")
   }
@@ -77,30 +81,34 @@ class App extends Component {
       }
     }));
   }
+
+  handleChange = (e) => {
+    const value = e.target.value;
+    this.setState({
+      ...this.state,
+      [e.target.name]: value
+    })
+  }  
   
 
   render() {
     return (
-      <>
-        <nav>
-          <Link to="/"><h1 class="home">COCA</h1></Link>
-          {this.state.currentUser
-            ?
-            <div>
-              <ul>
-                <Link to="/profile">Profile</Link>
-              </ul>
-              <button onClick={this.handleLogout}>Logout</button>
-            </div>
-            :
-            <button onClick={this.handleLoginButton}>Login</button>
-        }
-        </nav>
-        <h1>Hello World</h1>
+      <div class="app">
+        
+        <Nav
+          currentUser={this.state.currentUser}
+          handleLogin={this.handleLogin}
+          handleLogout={this.handleLogout}
+        />
+        
         <Switch>
+          <Route exact path="/home" render={(props) => (
+            <Home
+            />
+        )}/>
         <Route exact path="/login" render={(props) => (
             <Login
-              handleLogin={this.handleRegister}
+              handleLogin={this.handleLogin}
               handleChange={this.authHandleChange}
               formData={this.state.authFormData} />)} />
           <Route exact path="/register" render={(props) => (
@@ -117,6 +125,8 @@ class App extends Component {
           )} />
           <Route exact path="/volunteer" render={(props) => (
             <Volunteer
+              user={this.state.authFormData}
+              handleChange={this.handleChange}
             />
           )} />
           <Route exact path="/profile" render={(props) => (
@@ -124,8 +134,14 @@ class App extends Component {
               user={this.state.authFormData}
             />
           )}/>
-        </Switch>           
-      </>
+          <Route exact path="/contact" render={(props) => (
+            <Contact
+              
+            />
+          )}/>
+        </Switch> 
+        {/* <Footer /> */}
+      </div>
     );
   }
 }
