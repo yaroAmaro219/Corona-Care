@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
+  has_many :posts
 
   # validates :email, presence: true, unqiueness: true
   # validates :email, format: {with: URI::MailTo::EMAIL_REGEXP}

@@ -1,10 +1,27 @@
 const axios = require('axios')
 
-const baseUrl = process.env.NODE_ENV === 'production' ? 'https://carona-care.herokuapp.com/' : 'http://localhost:3000'
+const baseUrl = process.env.NODE_ENV === 'production' ? 'https://corona-community-care.herokuapp.com/' : 'http://localhost:3000'
 
 const api = axios.create({
   baseURL: baseUrl
 });
+
+// ============ POST ============
+
+export const postPost = async (id, postData) => {
+  const resp = await api.post(`/users/${id}/posts`, { post: postData })
+  return resp.data
+}
+
+export const showPost = async (id) => {
+  const resp = await api(`/users/${id}`)
+  return resp.data
+}
+
+export const destroyPost = async (id) => {
+  const resp = await api.delete(`/courts/:id/reservations/${id}`)
+  return resp.data
+}
 
 //========== AUTH ===================
 

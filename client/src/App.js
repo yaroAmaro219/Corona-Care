@@ -18,7 +18,9 @@ import {
   registerUser,
   loginUser,
   verifyUser,
-  removeToken
+  removeToken,
+  postPost,
+  showPost,
 } from './services/api-helper';
 
 
@@ -32,18 +34,47 @@ class App extends Component {
       currentUser: null,
       authFormData: {
         first_name: "",
-        age: {},
+        age: true,
         email: "",
         location: "",
-        type_of_volunteer: "",
-        best_time: "",
+        type_of_volunteer: "noodle",
+        best_time: "doodle",
         password: ""
       },
+      loginFormData: {
+        email: '',
+        password:''
+      },
+      name: '',
+      title: '',
+      content: '',
+      user_id: 37,
+      post: '',
     }
   }
 
   componentDidMount = () => {
     this.handleVerify();
+  }
+
+  getPost = async () => {
+    const post = await showPost();
+    this.setState({post})
+  }
+
+  addPost = async (id, name, title, content, user_id) => {
+    const newPost = await postPost(id, {
+      name: name,
+      title: title,
+      content: content,
+      user_id: user_id
+    })
+    this.setState(prevState => ({
+      post: newPost,
+      name: "",
+      title: "",
+      content: "",
+    }))
   }
 
   handleVerify = async () => {
@@ -54,7 +85,7 @@ class App extends Component {
   }
 
   handleLogin = async () => {
-    const currentUser = await loginUser(this.state.authFormData);
+    const currentUser = await loginUser(this.state.loginFormData);
     this.setState({ currentUser: currentUser })
     this.props.history.push("/decision")
   }
@@ -68,7 +99,7 @@ class App extends Component {
 
   handleLogout = () => {
     localStorage.removeItem("jwt");
-    this.setState({ currentUSer: null })
+    this.setState({ currentUser: null })
     removeToken();
     this.props.history.push("/login")
   }
@@ -120,8 +151,12 @@ class App extends Component {
           <Route exact path="/decision" render={(props) => (
             <Decision
             />)} />
-          <Route exact path="/gethelp" render={(props) => (
+          <Route exact path="/users/:user_id/posts" render={(props) => (
             <GetHelp
+              addPost={this.addPost}
+              postPost={this.postPost}
+              authFormData={this.authFormData}
+              handleChange={this.handleChange}
             />
           )} />
           <Route exact path="/volunteer" render={(props) => (

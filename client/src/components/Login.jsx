@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 const Login = (props) => {
     return (
-      <div>
+      <div class="login">
         <h2>Login</h2>
         <hr />
-        <form onSubmit={(e) => {
+        <form class="form" onSubmit={(e) => {
           e.preventDefault()
           props.handleLogin()
         }}>
@@ -14,8 +14,8 @@ const Login = (props) => {
           <input name="password" type="password" value={props.formData.password} onChange={props.handleChange} />
           <button>Login</button>
           <button><Link to="/register">Register</Link></button>
-        </form>
-      </div>
+          </form>
+          </div>
     )
 }
   

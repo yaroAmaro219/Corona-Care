@@ -7,5 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user1 = User.create!(first_name: "Luke", age: 77, email: "hello@hello.com", password:'Luke12345', location: 'Brooklyn', type_of_volunteer:'Good', best_time:'7PM')
+user2 = User.create!(first_name: "Juke", age: 77, email: "ello@hello.com", password:'Juke12345', location: 'Brooklyn', type_of_volunteer:'Good', best_time:'7PM')
+
+post1 = Post.create!(name: "Luke", title: "Groceries", content: "I like food", user_id:2)
 
 puts "#{User.count} users were created"
+puts "#{Post.count} posts were created"
