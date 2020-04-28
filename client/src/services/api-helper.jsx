@@ -7,8 +7,8 @@ const api = axios.create({
 });
 
 
-export const getUser = async () => {
-  const resp = await api.get('/users')
+export const showUser = async () => {
+  const resp = await api.get('/home')
   return resp.data
 }
 

@@ -10,7 +10,7 @@ class GetHelp extends Component {
     this.state = {
       isAdd: false,
       isEdit: false,
-      name: 'Billy',
+      name: props.name,
       title: '',
       content: '',
       user_id: 37,

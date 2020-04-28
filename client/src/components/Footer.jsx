@@ -2,9 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer class="page-footer">
-      <p>Specific Assembly © Copyright {new Date().getFullYear()}. All Rights Reserved.</p>
-    </footer>
+    <div class="footer">
+      Specific Assembly © Copyright {new Date().getFullYear()}. All Rights Reserved.
+    </div>
   )
 }
 

@@ -22,6 +22,7 @@ import {
   removeToken,
   postPost,
   showPost,
+  showUser,
 } from './services/api-helper';
 
 class App extends Component {
@@ -48,12 +49,21 @@ class App extends Component {
       content: '',
       user_id: '',
       post: '',
+      user: '',
     }
   }
 
   componentDidMount = () => {
     this.handleVerify();
     // this.getPost();
+    this.getUser();
+  }
+
+  getUser = async () => {
+    const user = await showUser();
+    if (user) {
+      this.setState({ user })
+    }
   }
 
     getPost = async () => {
@@ -62,6 +72,8 @@ class App extends Component {
       this.setState({ post });
       // }
     }
+  
+  
 
   addPost = async (id, name, title, content, user_id) => {
     const newPost = await postPost(id, {
@@ -95,7 +107,7 @@ class App extends Component {
     e.preventDefault();
     const currentUser = await registerUser(this.state.registerFormData);
     this.setState({ currentUser: currentUser })
-    this.props.history.push("/decision")
+    this.props.history.push("/home")
   }
 
   handleLogout = () => {
@@ -136,6 +148,7 @@ class App extends Component {
   
 
   render() {
+    console.log(this.state.user)
     return (
       <div class="app">
         {/* <p>Hello {this.state.authFormData.first_name}</p> */}
@@ -171,6 +184,7 @@ class App extends Component {
               postPost={this.postPost}
               authFormData={this.authFormData}
               handleChange={this.handleChange}
+              name={this.state.name}
             />
           )} />
           <Route exact path="/volunteer" render={(props) => (
@@ -179,9 +193,12 @@ class App extends Component {
               handleChange={this.handleChange}
             />
           )} />
-          <Route exact path="/profile" render={(props) => (
+          <Route exact path="/users" render={(props) => (
             <Profile
               user={this.state.registerFormData}
+              handleLogout={this.handleLogout}
+              getUser={this.getUser}
+              showUser={this.showUser}
             />
           )}/>
           <Route exact path="/contact" render={(props) => (
@@ -204,6 +221,7 @@ class App extends Component {
             />
           )}/>
         </Switch> 
+        {/* <Footer/> */}
         </div>
     );
   }
