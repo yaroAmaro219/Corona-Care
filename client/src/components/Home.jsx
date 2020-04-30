@@ -58,10 +58,10 @@ export default class Home extends Component {
             </div>
           
             <div class="sub-pic">
-            <p class="sub-option">Shopping</p>
-            <p class="sub-option">Mail</p>
-            <p class="sub-option">Chat</p>
-            <p class="sub-option">Medical</p>
+            <p class="sub-option">Grocery shopping & delivery</p>
+            <p class="sub-option">Post office pickup & dropoff</p>
+            <p class="sub-option">Conversation & social support</p>
+            <p class="sub-option">Pharmacy pick up & delivery</p>
             </div>
             </div>
           <div class="meet">

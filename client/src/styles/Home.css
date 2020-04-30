@@ -1,6 +1,20 @@
 h1 {
-  font-size: 25px;
+  font-size: 35px;
+  font-family: poppins;
+  margin: 0 0.5%;
+  font-weight: normal;
+}
 
+
+.meet {
+  background: whitesmoke;
+  padding: 4% 3% 5% 3%;
+  justify-content: center;
+}
+
+.showcase {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .top-img {
@@ -8,7 +22,7 @@ h1 {
   z-index: -1;
   width: 1500px;
   /* height: 741px; */
-  top: 100px;
+  top: 120px;
   left: 0;
   background-size: cover;
   margin-left: auto;
@@ -35,6 +49,7 @@ h1 {
   top: 10px;
   padding: 3% 5%;
   border-radius: 5%;
+  font-weight: bold;
 }
 
 .choice:hover {
@@ -48,7 +63,7 @@ h1 {
   width: 853px;
   height: 135px;
   left: 72px;
-  top: 434px;
+  top: 484px;
 
   font-family: Poppins;
   font-style: normal;
@@ -65,7 +80,7 @@ h1 {
   width: 800px;
   height: 134px;
   left: 75px;
-  top: 550px;
+  top: 600px;
 
   font-family: Open Sans;
   font-style: normal;
@@ -79,7 +94,7 @@ h1 {
 }
 
 .vol {
-  margin: 1% 2%;
+  margin: 1% 4%;
   padding: 2%;
 }
 
@@ -134,21 +149,20 @@ h1 {
   width: 1500px;
   justify-content: center;
   padding: 0;
-  margin: 0;
+  margin: 0 2% 5.7% 2%;
 }
 
 .sub-option {
   display: flex;
   flex-direction: row;
   font-size: 20px;
-  padding: 0 30px;
-  margin: 0 55px 15px 55px;
+  margin: 0 35px 15px 35px;
 }
 
 .bio {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 33.33%;
   /* margin-left: auto;
   margin-right: auto; */
   align-items: center;

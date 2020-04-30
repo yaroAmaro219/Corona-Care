@@ -27,7 +27,6 @@ div.nav {
 
 .nav {
   display: flex;
-  font-family: poppins;
   padding: 0 2% 0 0;
 }
 
@@ -47,7 +46,7 @@ div.nav {
 
 /* Dropdown Button */
 .dropbtn {
-  /* padding: 16px; */
+  padding: 12px;
   font-size: 16px;
   border: none;
   text-decoration: none;

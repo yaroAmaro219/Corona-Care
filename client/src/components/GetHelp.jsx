@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router-dom'
-import DatePicker from 'react-date-picker'
-import { showPost } from '../services/api-helper';
+
 
 class GetHelp extends Component {
   constructor(props) {

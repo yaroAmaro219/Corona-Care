@@ -16,17 +16,6 @@ div.decision {
   height: 200px;
 }
 
-/* h1 {
-  justify-content: center;
-  text-decoration: none;
-  font-size: 30px;
-  margin: 0;
-} */
-
-h2 {
-  justify-content: center;
-}
-
 .start {
   display: flex;
   flex-direction: row;
@@ -37,18 +26,10 @@ svg {
   padding: 0;
 }
 
-/* button {
-
-  text-decoration: none;
-  
-  margin-left: auto;
-  margin-right: auto;
-} */
 
 p {
   font-family: poppins;
   font-size: 20px;
-  line-height: 120%;
   font-style: italic;
 }
 
@@ -155,11 +136,6 @@ input[type=password] {
 html {
   height: 100%;
 } */
-
-.meet {
-  background: whitesmoke;
-}
-
 
 
 .nav>a {
