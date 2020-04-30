@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :authorize_request, except: :create
 
   # GET /users
-  def indexaa
+  def index
     @users = User.all
 
     render json: @users
@@ -48,7 +48,7 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:email,:password)
+      params.require(:user).permit(:first_name, :email, :location, :password)
     end
 end
  

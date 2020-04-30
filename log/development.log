@@ -30242,3 +30242,77 @@ Processing by UsersController#create as HTML
 Completed 201 Created in 230ms (Views: 0.9ms | ActiveRecord: 10.5ms | Allocations: 4323)
 
 
+Started GET "/auth/verify" for ::1 at 2020-04-30 13:47:44 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `authorize_request'
+Completed 200 OK in 40ms (Views: 4.2ms | ActiveRecord: 5.2ms | Allocations: 9658)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-30 13:47:46 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 901)
+
+
+Started POST "/users/" for ::1 at 2020-04-30 13:48:15 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"Jimmy John", "age"=>true, "email"=>"jimmy@john.com", "location"=>"250 john place", "type_of_volunteer"=>"noodle", "best_time"=>"doodle", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :age, :location, :type_of_volunteer, :best_time[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jimmy@john.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jimmy John"], ["email", "jimmy@john.com"], ["created_at", "2020-04-30 17:48:15.278881"], ["updated_at", "2020-04-30 17:48:15.278881"], ["password_digest", "$2a$12$rGJECRTxYCeIlBs9OQZ/Le6C9jl.xmyY2IoNRjRk67SLJQoBLZjTe"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 201 Created in 225ms (Views: 0.6ms | ActiveRecord: 4.8ms | Allocations: 4368)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-30 13:49:01 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `authorize_request'
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 5.7ms | Allocations: 8393)
+
+
+Started POST "/users/" for ::1 at 2020-04-30 13:49:31 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"johnny jim", "age"=>true, "email"=>"john@jim.com", "location"=>"jim 250", "type_of_volunteer"=>"noodle", "best_time"=>"doodle", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :age, :type_of_volunteer, :best_time[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@jim.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "email", "location", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "johnny jim"], ["email", "john@jim.com"], ["location", "jim 250"], ["created_at", "2020-04-30 17:49:31.445956"], ["updated_at", "2020-04-30 17:49:31.445956"], ["password_digest", "$2a$12$J1GxKlO3n7wLaALjmwQqo.f3CNWcg06iH7xst6XTgN3oEDAXWSWEi"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 201 Created in 213ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 4095)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-30 13:49:54 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 897)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-30 13:50:02 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"email"=>"ye@ye.com", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"email"=>"ye@ye.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ye@ye.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 210ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1211)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-30 13:50:08 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 880)
+
+
