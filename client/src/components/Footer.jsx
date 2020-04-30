@@ -6,8 +6,9 @@ import Insta from '../images/instagram.svg'
 
 const Footer = () => {
   return (
-    <div class="footer">
-      Follow us on social: 
+    <div class="footer-container">
+      <div class="footer">
+      <h1>Follow us on social: </h1>
       <div class="social">
         <Link to="https://twitter.com/"><img class="social-s" src={Twitter} /></Link>
         <Link to="https://www.linkedin.com/"><img class="social-s" src={Linkdin} /></Link>
@@ -15,6 +16,7 @@ const Footer = () => {
       </div>
       <div class="co-care">
             © {new Date().getFullYear()} Co-Care 
+      </div>
       </div>
     </div>
   )

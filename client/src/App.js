@@ -12,14 +12,14 @@ import Home from './components/Home'
 import Nav from './components/Nav'
 import Submit from './components/Submit'
 import Posts from './components/Posts'
-import Twitter from './images/twitter.svg'
-import Linkdin from './images/linkedin.svg'
-import Insta from './images/instagram.svg'
+import Footer from './components/Footer'
 import './styles/Login.css'
 import './styles/Register.css'
 import './styles/Nav.css'
 import './styles/GetHelp.css'
-import Footer from './components/Footer'
+import './styles/Home.css'
+import './styles/footer.css'
+import './styles/Volunteer.css'
 // import './App.css';
 
 import {
@@ -201,7 +201,7 @@ class App extends Component {
           <Route exact path="/decision" render={(props) => (
             <Decision
             />)} />
-          <Route exact path="/users/:user_id/posts" render={(props) => (
+          <Route exact path="/users/:id/posts" render={(props) => (
             <GetHelp
               addPost={this.addPost}
               postPost={this.postPost}
@@ -250,17 +250,7 @@ class App extends Component {
           )} /> 
           </Switch> 
           </div>
-          {/* <div class="footer">
-            Follow us on social: 
-          <div class="social">
-            <Link to="https://twitter.com/"><img class="social-s" src={Twitter} /></Link>
-            <Link to="https://www.linkedin.com/"><img class="social-s" src={Linkdin} /></Link>
-            <Link to="https://www.instagram.com/"><img class="social-s" src={Insta} /></Link>
-          </div>
-          <div class="co-care">
-            © {new Date().getFullYear()} Co-Care 
-           </div>
-        </div> */}
+        {/* <Footer /> */}
       </div>
     );
   }

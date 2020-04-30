@@ -37,9 +37,9 @@ export default class Home extends Component {
                 </div>
           </div>
         
-        <div class="volunteer-intro">
-          <h1>Our volunteers can help with...</h1>
-          <div class="options">
+        <div class="volunteer-container">
+            <h1>Our volunteers can help with...</h1>
+            <div class="pics-container">
             <div class="pics">
               <svg class="vol" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M29.999 80C24.4992 80 20.0493 84.5 20.0493 90C20.0493 95.5 24.4992 100 29.999 100C35.4988 100 39.9986 95.5 39.9986 90C39.9986 84.5 35.4988 80 29.999 80ZM0 0V10H9.99966L27.999 47.95L21.2493 60.2C20.4493 61.6 19.9993 63.25 19.9993 65C19.9993 70.5 24.4992 75 29.999 75H89.9969V65H32.0989C31.3989 65 30.8489 64.45 30.8489 63.75L30.9989 63.15L35.4988 55H72.7475C76.4974 55 79.7973 52.95 81.4972 49.85L99.3966 17.4C99.8091 16.6369 100.017 15.7799 99.9989 14.9126C99.9812 14.0454 99.7389 13.1975 99.2956 12.4519C98.8523 11.7063 98.2232 11.0885 97.4697 10.6587C96.7162 10.229 95.8641 10.002 94.9967 10H21.0493L16.3494 0H0ZM79.9973 80C74.4974 80 70.0476 84.5 70.0476 90C70.0476 95.5 74.4974 100 79.9973 100C85.4971 100 89.9969 95.5 89.9969 90C89.9969 84.5 85.4971 80 79.9973 80Z" fill="#5BB275" />
@@ -56,34 +56,36 @@ export default class Home extends Component {
                 <path d="M53.649 33.3449L62.4805 20.6342C62.9757 20.6755 63.4709 20.6755 63.9661 20.6342C66.0205 20.6332 68.0278 20.0188 69.7309 18.8699C71.4339 17.721 72.7552 16.0898 73.5254 14.1852C74.2956 12.2807 74.4798 10.1896 74.0542 8.17982C73.6286 6.17002 72.6127 4.33303 71.1366 2.90418C69.6605 1.47533 67.7915 0.519682 65.7689 0.159664C63.7463 -0.200353 61.6623 0.0516511 59.7838 0.883394C57.9053 1.71514 56.318 3.08874 55.225 4.82825C54.132 6.56776 53.5833 8.59395 53.649 10.6473V11.4726L33.0148 33.3449H53.649ZM74.2833 49.8523V41.5986H0V49.8523L12.3805 78.7402L0 107.628V115.882H74.2833V107.628L66.0296 78.7402L74.2833 49.8523ZM57.7759 82.8671H41.2685V99.3745H33.0148V82.8671H16.5074V74.6134H33.0148V58.106H41.2685V74.6134H57.7759V82.8671Z" fill="#5BB275" />
               </svg>
             </div>
-          </div>
-          <div class="sub-pic">
+          
+            <div class="sub-pic">
             <p class="sub-option">Shopping</p>
             <p class="sub-option">Mail</p>
             <p class="sub-option">Chat</p>
             <p class="sub-option">Medical</p>
-          </div>
+            </div>
+            </div>
           <div class="meet">
             <h1>Meet a few of our Volunteers</h1>
             <div class="showcase">
               <div class="bio">
                 <img class="image" src={Image} />
                 <h3>Simon T.</h3>
-                <p>"I want to make meaningful connections with people in my community"</p>
+                <p class="quote">"I want to make meaningful connections with people in my community"</p>
               </div>
               <div class="bio">
                 <img class="image" src={Image1} />
                 <h3>Kuar A.</h3>
-                <p>"COVOID-19 has been hard on my family, and I want to help in any way I can."</p>
+                <p class="quote">"COVOID-19 has been hard on my family, and I want to help in any way I can."</p>
               </div>
               <div class="bio">
                 <img class="image" src={Image2} />
                 <h3>Alex F.</h3>
-                <p>"Always here for my neighbors."</p>
+                <p class="quote">"Always here for my neighbors."</p>
                 </div>
               </div>
+            </div>
+            <Footer />
           </div>
-        </div>
         </div>
       </>
     )

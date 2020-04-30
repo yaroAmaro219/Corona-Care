@@ -1,0 +1,32 @@
+.footer-container {
+  background-color: rgb(196, 195, 195);
+  font-size: 20px;
+  font-family: poppins;
+  color: white;
+}
+
+.footer {
+  display:flex;
+  flex-direction: row;
+  padding: 0 2% 0 2%;
+}
+
+.social {
+  padding: 1%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.co-care {
+  margin-left: auto;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+}
+
+.social-s {
+  padding: 15px;
+  margin: 20%;
+  width: 30px;
+}

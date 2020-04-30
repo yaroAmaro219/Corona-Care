@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Footer from './Footer'
 import {withRouter} from 'react-router-dom'
 
 const Login = (props) => {
@@ -14,9 +14,10 @@ const Login = (props) => {
   // }
 
     const { handleLogin, authFormData, handleChange } = props
-    return (
-      <div className='login-container flex row'>
-        <form className='left-container flex column' onSubmit={handleLogin}>
+  return (
+      <>
+      <div className='login-container'>
+        <form className='left-container' onSubmit={handleLogin}>
           <h1 className='sign-in-title'>SIGN IN</h1>
           <div className='input-container'>
             <input name="email" type="text" placeholder='Email' value={authFormData.email} onChange={handleChange} className='input-style' />
@@ -25,12 +26,16 @@ const Login = (props) => {
           <button className='submit-button'> Login</button>
           </form>
         
-          <div className='right-container'>
-          <h1 className='account-title' >NEED AN ACCOUNT?</h1>
-          <button onClick={() => { props.history.push('/register') }} className='register-button'>Register</button>
+        <div className='right-container'>
+          <div className="need-account">
+            <h1 className='account-title' >NEED AN ACCOUNT?</h1>
+            <button onClick={() => { props.history.push('/register') }} className='register-button'>Register</button>
+          </div>
         </div>
+       
       </div>
-      
+      <Footer />
+      </>
     )
   }
 

@@ -55,6 +55,7 @@ p {
 h3 {
   font-family: Poppins;
   font-size: 30px;
+  margin: 0;
 }
 
 .image {
@@ -62,23 +63,7 @@ h3 {
   margin: 2%;
 }
 
-.showcase {
-  display: flex;
-  flex-direction: row;
 
-}
-
-.bio {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.meet {
-  margin: 2% 0 2% 0;
-}
 
 .post {
   display: flexbox;
@@ -123,52 +108,6 @@ input[type=password] {
   box-sizing: border-box;
 } */
 
-/* Dropdown Button */
-.dropbtn {
-
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
 
 .email {
   display: flex;
@@ -195,20 +134,6 @@ input[type=password] {
   flex-direction: row;
 }
 
-.choice {
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
-  background: #007EFF;
-  color: white;
-  text-decoration: none;
-  margin: 5%;
-  top: 10px;
-  padding: 3%;
-  border-radius: 5%;
-}
-
-.choice:hover {
-  background: rgb(1, 78, 155);
-}
 
 .route {
   flex: 1 0 auto;
@@ -231,209 +156,23 @@ html {
   height: 100%;
 } */
 
-.footer {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-}
-
-.social-s {
-  padding: 4%;
-  color: white;
-}
-
-.social {
-  display: flex;
-  flex-direction: row;
-  /* padding: 1%;
-  margin: 1%; */
-}
-
-.co-care {
-  margin-left: auto;
-  padding: 1%;
-}
-
-.f {
-  flex-shrink:0;
-  bottom: auto;
-  top: 1000px;
-}
-
 .meet {
   background: whitesmoke;
 }
 
-.sub-pic {
-  display: flex;
-  flex-direction: row;
-  width: 1200px;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-}
 
-.sub-option {
-  display: flex;
-  flex-direction: row;
-  font-size: 20px;
-  padding: 0 15px;
-  margin: 0 55px;
-}
-
-.volunteer-intro {
-  background: rgb(213, 245, 205);
-  width: 1200px;
-  background-size: cover;
-  display: flex;
-  flex-direction: row;
-}
-
-div.nav {
-  display: flex;
-  justify-items: center;
-}
-
-.nav {
-  text-align: center;
-  display: flex;
-  top: 0;
-  font-family: poppins;
-}
 
 .nav>a {
   margin: 20px;
+  text-decoration: none;
 }
 
 a:-webkit-any-link {
   cursor: pointer;
 }
 
-/* a {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-} */
-
 .page-footer {
   flex-shrink: 0;
-}
-
-nav.nav {
-  margin: 3%;
-}
-
-/* div {
-  display: block;
-} */
-
-.header {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  align-items: center;
-  justify-content: space-between;
-  width: 1100px;
-}
-
-.header-logo {
-  position: absolute;
-  width: 147px;
-  height: 67.21px;
-  left: 72px;
-  top: 26px;
-}
-
-.home {
-  display: flex;
-  flex-direction: row;
-}
-
-.top-img {
-  position: absolute;
-  z-index: -1;
-  width: 1200px;
-  height: 741px;
-  top: 75px;
-  left: 0;
-  background-size: cover;
-
-}
-
-.text-1 {
-  position: absolute;
-  width: 853px;
-  height: 135px;
-  left: 72px;
-  top: 434px;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 54px;
-  line-height: 64px;
-  /* or 119% */
-  letter-spacing: 0.002em;
-
-  color: #FFFFFF;
-}
-
-.text-2 {
-  position: absolute;
-  width: 800px;
-  height: 134px;
-  left: 75px;
-  top: 550px;
-
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 32px;
-  /* or 160% */
-  letter-spacing: 0.002em;
-
-  color: #FFFFFF;
-}
-
-.vol {
-  margin: 2%;
-  padding: 2%;
-}
-
-.volunteer-intro {
-  left: 0;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  /* width: 853px;
-  height: 135px; */
-  background: rgb(238, 252, 235);
-  background-size: cover;
-  top: 750px;
-  margin: 0;
-  padding: 0;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 54px;
-  line-height: 64px;
-  /* or 119% */
-  letter-spacing: 0.002em;
-
-  color: black;
-}
-
-.buttons {
-  /* margin-left: auto;
-  margin-right: auto; */
-  /* margin: 1%; */
-  /* padding: 2%; */
-  position: absolute;
-  width: 800px;
-  height: 134px;
-  left: 200px;
-  top: 675px;
 }
 
 .rectangle-1 {

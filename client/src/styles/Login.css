@@ -1,72 +1,75 @@
+.login-container {
+  display: flex;
+}
 
-  
-  .login-container{
-    width: 100vw;
-    height: 100vh;
-  }
-  
-  .right-container{
-    width: 30%;
-    height: 100%;
-    background-image: url();
-    justify-content: space-between;
-  }
-  
-  .register-button{
-    margin-bottom: 4%;
-    font-size: x-large;
-    background-color: rgb(75, 1, 195);
-    border: none;
-    color: rgb(231, 231, 231);
-  }
-  
-  .register-button:hover, .submit-button:hover{
-    background-color: rgb(37, 17, 82);
-    cursor: pointer;
-  
-  }
-  
-  .account-title{
-    color: rgb(231, 231, 231);
-    margin: 3% auto;
-  }
-  
-  .left-container{
-    width: 70%;
-    height: 100%;
-    justify-content: space-between;
-    background-color: rgb(231, 231, 231);
-   
-  }
-  
-  .sign-in-title{
-    color: rgb(75, 1, 195);
-    margin: 5% 0;
-    text-align: center;
-  }
-  
-  .input-style{
-    width: 70%;
-    border: none;
-    border-bottom: solid rgb(75, 1, 195) 1px;
-    font-size: x-large;
-    display: block;
-    margin: 5% auto;
-    background-color: rgb(231, 231, 231);
-    outline: none;
-  }
-  
-  .input-container{
-    display: block;
-  }
-  
-  .submit-button{
-    display: block;
-    margin: 10% auto;
-    text-align: center;
-    background-color: rgb(75, 1, 195);
-    color: rgb(231, 231, 231);
-    width: 40%;
-    height: 12%;
-    font-size: x-large;
-  }
+.right-container {
+  width: 50%;
+  background-image: url();
+  justify-content: space-between;
+  background: rgb(237, 250, 234);
+}
+
+.need-account {
+  margin: 140px 0 0 0;
+}
+
+.left-container {
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(231, 231, 231);
+}
+
+.register-button {
+  margin-bottom: 4%;
+  font-size: x-large;
+  background-color: rgb(75, 1, 195);
+  border: none;
+  color: rgb(231, 231, 231);
+}
+
+.register-button:hover,
+.submit-button:hover {
+  background-color: rgb(37, 17, 82);
+  cursor: pointer;
+
+}
+
+.account-title {
+  color:rgb(75, 1, 195);
+  margin: 3% auto;
+}
+
+
+
+.sign-in-title {
+  color: rgb(75, 1, 195);
+  margin: 5% 0;
+  text-align: center;
+}
+
+.input-style {
+  width: 70%;
+  border: none;
+  border-bottom: solid rgb(75, 1, 195) 1px;
+  font-size: x-large;
+  display: block;
+  margin: 5% auto;
+  background-color: rgb(231, 231, 231);
+  outline: none;
+}
+
+.input-container {
+  display: block;
+}
+
+.submit-button {
+  display: block;
+  margin: 10% auto;
+  text-align: center;
+  background-color: rgb(75, 1, 195);
+  color: rgb(231, 231, 231);
+  width: 40%;
+  height: 12%;
+  font-size: x-large;
+}

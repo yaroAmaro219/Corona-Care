@@ -1,21 +1,29 @@
 
   .register-main-container{
-    height: 100vh;
+    display: flex;
+
   }
   
   .register-right-container{
   width: 50%;
-  /* height: 100%; */
-  margin-left: auto;
-  margin-right: 0;
   background-color: rgb(231, 231, 231);
   }
+
+  .register-signin-container{
+    width: 50%;
+    padding: 5%;
+    margin: 5% 0;
+    }
   
   .register-left-container{
-    justify-content: space-between;
     width: 50%;
     /* height: 100%; */
     background-image: url();
+    top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(237, 250, 234);
   }
   
   .register-input-style{
@@ -30,19 +38,17 @@
   }
   
   .register-title{
-    margin: 20% 0;
     text-align: center;
     color: rgb(0, 146, 12);
   }
   
   .register-submit-button{
     display: block;
-    margin: 15% auto;
+    margin: 5% auto;
     text-align: center;
     background-color: rgb(0, 146, 12);
     color: rgb(231, 231, 231);
-    width: 40%;
-    height: 7%;
+    padding: 3%;
     font-size: x-large;
   }
   
@@ -54,11 +60,11 @@
   
   .register-signin-redirect-button{
     margin-bottom: 0;
-    height: 7%;
     font-size: x-large;
     background-color: rgb(0, 146, 12);
     border: none;
     color: rgb(231, 231, 231);
+    padding: 5%;
   }
   
   .register-signin-redirect-button:hover, .register-submit-button:hover{
