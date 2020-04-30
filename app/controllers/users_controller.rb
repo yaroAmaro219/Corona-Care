@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy, :index]
+  before_action :set_user, only: [:show, :update, :destroy]
+  before_action :authorize_request, except: :create
 
   # GET /users
-  def index
+  def indexaa
     @users = User.all
 
     render json: @users
@@ -18,8 +19,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-			@token = encode({ user_id: @user.id })
-      render json: { user: @user.frontend_data, token: @token }, status: :created, location: @user
+			@token = encode({ user_id: @user.id, email: @user.email})
+      render json: { user: @user, token: @token }, status: :created, location: @user
     else
       render json: @user.errors, status: :unprocessable_entity
     end
@@ -47,7 +48,7 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:email, :password)
+      params.require(:user).permit(:email,:password)
     end
 end
  

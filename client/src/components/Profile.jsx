@@ -1,28 +1,8 @@
-import React, {Component} from 'react'
+import React from 'react'
+import {Link} from 'react-router-dom'
 
-class Profile extends Component {
-  constructor(props) {
-    super(props)
-
-    this.sate = {
-      user: ''
-    }
-  }
-
-  componentDidMount() {
-    this.getUser();
-  }
-
-  getUser = async () => {
-    const user = await this.props.showUser();
-    if (user) {
-      this.setState({ user })
-    }
-  }
-  
-
-  render() {
-    // console.log(this.state.user)
+const Profile = (props) => {
+  const {handleLogout} = props
     return (
       <div>
         <h1>Hello User</h1>
@@ -35,10 +15,10 @@ class Profile extends Component {
             )
           })
         } */}
-        <button onClick={this.props.handleLogout}>Logout</button>
+        <Link to="/login"><button onClick={handleLogout}>Logout</button></Link>
       </div>
     )
   }
-}
+
 
 export default Profile;

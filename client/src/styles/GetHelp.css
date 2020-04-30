@@ -1,0 +1,27 @@
+.gethelp-main-container {
+  height: 100%;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.gethelp-options {
+color: black;
+}
+
+.options {
+  width: 20%;
+}
+
+.option-submit-button{
+  display: block;
+  align-itemsaaaaaa: center;
+  /* margin: 15% auto; */
+  text-align: center;
+  background-color: rgb(0, 146, 12);
+  color: rgb(231, 231, 231);
+  width: 40%;
+  height: 7%;
+  font-size: x-large;
+}

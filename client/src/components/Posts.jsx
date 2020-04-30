@@ -20,18 +20,22 @@ export default class Posts extends Component {
       this.props.post
     &&
       this.props.post.map((post, index) => {
-      return (
+        return (
+          <>
         <div class="post">
+          <div class="post-text">
           <h1>Hi I'm {post.name}</h1>
           <br />
           <h2>I Need Help With {post.title}</h2>
-          <p>Good things to know: {post.content}</p>
-        </div>
+            <p>Good things to know: {post.content}</p>
+            </div>
+            </div>
+            </>
       )
     })
     return (
       <div>
-        
+         <h1>Posts</h1>
      {post}
       </div>
     )

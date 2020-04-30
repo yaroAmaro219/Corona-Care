@@ -12,8 +12,15 @@ import Home from './components/Home'
 import Nav from './components/Nav'
 import Submit from './components/Submit'
 import Posts from './components/Posts'
+import Twitter from './images/twitter.svg'
+import Linkdin from './images/linkedin.svg'
+import Insta from './images/instagram.svg'
+import './styles/Login.css'
+import './styles/Register.css'
+import './styles/Nav.css'
+import './styles/GetHelp.css'
 import Footer from './components/Footer'
-import './App.css';
+// import './App.css';
 
 import {
   registerUser,
@@ -53,10 +60,14 @@ class App extends Component {
     }
   }
 
-  componentDidMount = () => {
-    this.handleVerify();
-    // this.getPost();
-    this.getUser();
+  componentDidMount = async () => {
+    const currentUser = await verifyUser();
+    if (currentUser) {
+      this.setState({
+        currentUser
+      })
+    }
+    // this.getUser();
   }
 
   getUser = async () => {
@@ -90,31 +101,37 @@ class App extends Component {
     }))
   }
 
-  handleVerify = async () => {
-    const currentUser = await verifyUser();
-    if (currentUser) {
-      this.setState({currentUser: currentUser})
-    }
-  }
+  // handleVerify = async () => {
+  //   const currentUser = await verifyUser();
+  //   if (currentUser) {
+  //     this.setState({currentUser: currentUser})
+  //   }
+  // }
 
-  handleLogin = async () => {
+  handleLogin = async (e) => {
+    e.preventDefault();
     const currentUser = await loginUser(this.state.authFormData);
-    this.setState({ currentUser: currentUser })
+    this.setState({
+      currentUser
+    })
     this.props.history.push("/home")
   }
 
   handleRegister = async (e) => {
     e.preventDefault();
     const currentUser = await registerUser(this.state.registerFormData);
-    this.setState({ currentUser: currentUser })
+    this.setState({
+      currentUser
+    })
     this.props.history.push("/home")
   }
 
   handleLogout = () => {
     localStorage.removeItem("jwt");
-    this.setState({ currentUser: null })
+    this.setState({
+      currentUser: null
+    })
     removeToken();
-    this.props.history.push("/login")
   }
 
   authHandleChange = (e) => {
@@ -138,43 +155,49 @@ class App extends Component {
   }
   
 
-  handleChange = (e) => {
-    const value = e.target.value;
-    this.setState({
-      ...this.state,
-      [e.target.name]: value
-    })
-  }  
+  // handleChange = (e) => {
+  //   const value = e.target.value;
+  //   this.setState({
+  //     ...this.state,
+  //     [e.target.name]: value
+  //   })
+  // }  
+
+  // handleFormChange = (e) => {
+  //   const { name, value } = e.target;
+  //   this.setState({ formData: { [name]: value } });
+  // }
   
 
   render() {
-    console.log(this.state.user)
+    // console.log(this.state.user)
     return (
       <div class="app">
-        {/* <p>Hello {this.state.authFormData.first_name}</p> */}
         <Nav
           currentUser={this.state.currentUser}
           handleLogin={this.handleLogin}
           handleLogout={this.handleLogout}
           formData={this.state.authFormData}
+          user={this.state.user}
         />
-        
+        <div class="route">
         <Switch>
           <Route exact path="/home" render={(props) => (
-            <Home
+              <Home
+                currentUser={this.state.currentUser}
             />
         )}/>
         <Route exact path="/login" render={(props) => (
             <Login
-              handleLogin={this.handleLogin}
-              handleChange={this.authHandleChange}
-              formData={this.state.authFormData}
-              {...props}/>)} />
+                handleLogin={this.handleLogin}
+                handleChange={this.authHandleChange}
+                authFormData={this.state.authFormData}
+                {...props}/>)} />
           <Route exact path="/register" render={(props) => (
             <Register
               handleRegister={this.handleRegister}
               handleChange={this.registerHandleChange}
-              formData={this.state.registerFormData} />)} />
+              registerFormData={this.state.registerFormData} /> )} />
           <Route exact path="/decision" render={(props) => (
             <Decision
             />)} />
@@ -191,9 +214,10 @@ class App extends Component {
             <Volunteer
               user={this.state.authFormData}
               handleChange={this.handleChange}
+              currentUser={this.currentUser}
             />
           )} />
-          <Route exact path="/users" render={(props) => (
+          <Route exact path="/profile" render={(props) => (
             <Profile
               user={this.state.registerFormData}
               handleLogout={this.handleLogout}
@@ -219,10 +243,25 @@ class App extends Component {
               getPost={this.getPost}
               showPost={this.showPost}
             />
-          )}/>
-        </Switch> 
-        {/* <Footer/> */}
-        </div>
+          )} />
+          <Route exact path="/" render={(props) => (
+            <Home
+            />
+          )} /> 
+          </Switch> 
+          </div>
+          {/* <div class="footer">
+            Follow us on social: 
+          <div class="social">
+            <Link to="https://twitter.com/"><img class="social-s" src={Twitter} /></Link>
+            <Link to="https://www.linkedin.com/"><img class="social-s" src={Linkdin} /></Link>
+            <Link to="https://www.instagram.com/"><img class="social-s" src={Insta} /></Link>
+          </div>
+          <div class="co-care">
+            © {new Date().getFullYear()} Co-Care 
+           </div>
+        </div> */}
+      </div>
     );
   }
 }

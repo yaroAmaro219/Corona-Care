@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Image from '../images/E11.svg'
+import Image1 from '../images/E5.svg'
+import Image2 from '../images/E6.svg'
 import Footer from './Footer'
 import '../App.css'
 
 export default class Home extends Component {
   render() {
+    console.log(this.props.currentUser)
     return (
       <>
         <div class="home">
@@ -20,11 +24,19 @@ export default class Home extends Component {
               a lasting connection.
           <br />
               <br />
-              <Link class="choice" to="/volunteer">I Want To Help</Link>
-              <Link class="choice" to="/users/:user_id/posts">I Need Help</Link>
             </div>
+            <div class="buttons">
+              <Link class="choice" to=
+                {this.props.currentUser
+                  ?
+                  "/volunteer"
+                  :
+                  "/register"}
+              >I Want To Help</Link>
+                <Link class="choice" to="/users/:user_id/posts">I Need Help</Link>
+                </div>
           </div>
-        </div>
+        
         <div class="volunteer-intro">
           <h1>Our volunteers can help with...</h1>
           <div class="options">
@@ -42,23 +54,37 @@ export default class Home extends Component {
               </svg>
               <svg class="vol" width="75" height="116" viewBox="0 0 75 116" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M53.649 33.3449L62.4805 20.6342C62.9757 20.6755 63.4709 20.6755 63.9661 20.6342C66.0205 20.6332 68.0278 20.0188 69.7309 18.8699C71.4339 17.721 72.7552 16.0898 73.5254 14.1852C74.2956 12.2807 74.4798 10.1896 74.0542 8.17982C73.6286 6.17002 72.6127 4.33303 71.1366 2.90418C69.6605 1.47533 67.7915 0.519682 65.7689 0.159664C63.7463 -0.200353 61.6623 0.0516511 59.7838 0.883394C57.9053 1.71514 56.318 3.08874 55.225 4.82825C54.132 6.56776 53.5833 8.59395 53.649 10.6473V11.4726L33.0148 33.3449H53.649ZM74.2833 49.8523V41.5986H0V49.8523L12.3805 78.7402L0 107.628V115.882H74.2833V107.628L66.0296 78.7402L74.2833 49.8523ZM57.7759 82.8671H41.2685V99.3745H33.0148V82.8671H16.5074V74.6134H33.0148V58.106H41.2685V74.6134H57.7759V82.8671Z" fill="#5BB275" />
-            </svg>
+              </svg>
             </div>
           </div>
           <div class="sub-pic">
-              <p class="sub-option">Shopping</p>
-              <p class="sub-option">Mail</p>
-              <p class="sub-option">Chat</p>
-              <p class="sub-option">Medical</p>
+            <p class="sub-option">Shopping</p>
+            <p class="sub-option">Mail</p>
+            <p class="sub-option">Chat</p>
+            <p class="sub-option">Medical</p>
           </div>
           <div class="meet">
             <h1>Meet a few of our Volunteers</h1>
-            <img src={'./Ellipse11.jpg'}/>
+            <div class="showcase">
+              <div class="bio">
+                <img class="image" src={Image} />
+                <h3>Simon T.</h3>
+                <p>"I want to make meaningful connections with people in my community"</p>
+              </div>
+              <div class="bio">
+                <img class="image" src={Image1} />
+                <h3>Kuar A.</h3>
+                <p>"COVOID-19 has been hard on my family, and I want to help in any way I can."</p>
+              </div>
+              <div class="bio">
+                <img class="image" src={Image2} />
+                <h3>Alex F.</h3>
+                <p>"Always here for my neighbors."</p>
+                </div>
+              </div>
           </div>
         </div>
-        <div class="f">
-          {/* <Footer /> */}
-          </div>
+        </div>
       </>
     )
   }

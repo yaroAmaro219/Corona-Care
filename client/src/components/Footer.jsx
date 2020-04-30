@@ -1,9 +1,21 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+import Twitter from '../images/twitter.svg'
+import Linkdin from '../images/linkedin.svg'
+import Insta from '../images/instagram.svg'
 
 const Footer = () => {
   return (
     <div class="footer">
-      Specific Assembly © Copyright {new Date().getFullYear()}. All Rights Reserved.
+      Follow us on social: 
+      <div class="social">
+        <Link to="https://twitter.com/"><img class="social-s" src={Twitter} /></Link>
+        <Link to="https://www.linkedin.com/"><img class="social-s" src={Linkdin} /></Link>
+        <Link to="https://www.instagram.com/"><img class="social-s" src={Insta} /></Link>
+      </div>
+      <div class="co-care">
+            © {new Date().getFullYear()} Co-Care 
+      </div>
     </div>
   )
 }

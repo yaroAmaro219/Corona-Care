@@ -1,0 +1,67 @@
+
+  .register-main-container{
+    height: 100vh;
+  }
+  
+  .register-right-container{
+  width: 50%;
+  /* height: 100%; */
+  margin-left: auto;
+  margin-right: 0;
+  background-color: rgb(231, 231, 231);
+  }
+  
+  .register-left-container{
+    justify-content: space-between;
+    width: 50%;
+    /* height: 100%; */
+    background-image: url();
+  }
+  
+  .register-input-style{
+    width: 70%;
+    border: none;
+    border-bottom: solid rgb(0, 146, 12) 1px;
+    font-size: x-large;
+    display: block;
+    margin: 5% auto;
+    background-color: rgb(231, 231, 231);
+    outline: none;
+  }
+  
+  .register-title{
+    margin: 20% 0;
+    text-align: center;
+    color: rgb(0, 146, 12);
+  }
+  
+  .register-submit-button{
+    display: block;
+    margin: 15% auto;
+    text-align: center;
+    background-color: rgb(0, 146, 12);
+    color: rgb(231, 231, 231);
+    width: 40%;
+    height: 7%;
+    font-size: x-large;
+  }
+  
+  .have-account-title{
+    color: rgb(46, 45, 45);
+    margin: 3% auto;
+    text-align: center;
+  }
+  
+  .register-signin-redirect-button{
+    margin-bottom: 0;
+    height: 7%;
+    font-size: x-large;
+    background-color: rgb(0, 146, 12);
+    border: none;
+    color: rgb(231, 231, 231);
+  }
+  
+  .register-signin-redirect-button:hover, .register-submit-button:hover{
+    background-color: rgb(0, 90, 8);
+    cursor: pointer;
+  }

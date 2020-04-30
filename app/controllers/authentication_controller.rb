@@ -5,14 +5,14 @@ class AuthenticationController < ApplicationController
 		@user = User.find_by_email(login_params[:email])
 		if @user.authenticate(login_params[:password])
 			token = encode(user_id: @user.id)
-			render json: {user: @user.frontend_data, token: token}, status: :ok
+			render json: {user: @user, token: token}, status: :ok
 		else
 			render json: { errors: 'unauthorized' }, status: :unauthorized
 		end
-	end
-
+  end
+  
 	def verify 
-		render jdon: @current_user.frontend_data, status: :ok
+		render json: @current_user, status: :ok
 	end
 
 	private

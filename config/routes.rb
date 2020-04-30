@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
  resources :posts
-
-#  get '/home', to: 'users#show'
+ resources :users
+ 
  
  
 # ============= Auth ====================
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :posts
   end
   get '/home', to: 'users#index'
-  
+  get '/home', to: 'users#show'
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

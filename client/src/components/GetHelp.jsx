@@ -10,27 +10,13 @@ class GetHelp extends Component {
     this.state = {
       isAdd: false,
       isEdit: false,
-      name: props.name,
+      name: '',
       title: '',
       content: '',
-      user_id: 37,
+      user_id: this.props.match.params.id,
       data: '',
     }
   }
-
-
-  // addPost = () => {
-  //   const newPost = this.props.postPost(37, this.state.postForm)
-  //   this.setState(prevState =>
-  //     ({
-  //       data: [...prevState.data, newPost],
-  //       name: '',
-  //       title: '',
-  //       content: '',
-  //       user_id: null,
-  //     }
-  //     ))
-  // }
 
   handleChange = (e) => {
     const value = e.target.value;
@@ -44,14 +30,14 @@ class GetHelp extends Component {
     console.log(this.state.title)
     console.log(this.state.content)
     return (
-      <div class="help">
-        <h1>What Do You Want Help With?</h1>
-        <div class="options">
-          <button onClick={(e) => this.setState({ title: 'Groceries' })}>Groceries</button>
-          <button onClick={(e) => this.setState({ title: 'Medication Pick Up' })}>Medication Pick Up</button>
-          <button onClick={(e) => this.setState({ title: 'Post Office' })}>Post Office</button>
-          <button onClick={(e) => this.setState({ title: 'Someone To Talk To!' })}>Someone To Talk To!</button>
-        </div>
+      <div class="gethelp-main-container flex row">
+        <h1 class="title">I need help with:</h1>
+        <div class="gethelp-options">
+          <button class="option-submit-button" onClick={(e) => this.setState({ title: 'Groceries' })}>Groceries</button>
+          <button class="option-submit-button" onClick={(e) => this.setState({ title: 'Medication Pick Up' })}>Medication Pick Up</button>
+          <button class="option-submit-button" onClick={(e) => this.setState({ title: 'Post Office' })}>Post Office</button>
+          <button class="option-submit-button" onClick={(e) => this.setState({ title: 'Someone To Talk To!' })}>Someone To Talk To!</button>
+        </div >
 
         <form>
           <p>Anything else you'd like your volunteer to know?</p>
@@ -62,13 +48,13 @@ class GetHelp extends Component {
           <Link to="/submit"><button
             onClick={(e) => {
               this.props.addPost(
-                // this.props.match.params.id,
-                1,
+                this.props.match.params.id,
+
                 this.state.name, this.state.title, this.state.content, this.state.user_id)
             }}
           >Submit</button></Link>
         </form>
-      </div>
+      </div >
     )
   }
 }
