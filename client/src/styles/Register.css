@@ -1,73 +1,89 @@
+.register-main-container {
+  display: flex;
 
-  .register-main-container{
-    display: flex;
+}
 
-  }
-  
-  .register-right-container{
+.register-right-container {
   width: 50%;
   background-color: rgb(231, 231, 231);
-  }
+}
 
-  .register-signin-container{
-    width: 50%;
-    padding: 5%;
-    margin: 5% 0;
-    }
-  
-  .register-left-container{
-    width: 50%;
-    /* height: 100%; */
-    background-image: url();
-    top: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgb(237, 250, 234);
-  }
-  
-  .register-input-style{
-    width: 70%;
-    border: none;
-    border-bottom: solid rgb(0, 146, 12) 1px;
-    font-size: x-large;
-    display: block;
-    margin: 5% auto;
-    background-color: rgb(231, 231, 231);
-    outline: none;
-  }
-  
-  .register-title{
-    text-align: center;
-    color: rgb(0, 146, 12);
-  }
-  
-  .register-submit-button{
-    display: block;
-    margin: 5% auto;
-    text-align: center;
-    background-color: rgb(0, 146, 12);
-    color: rgb(231, 231, 231);
-    padding: 3%;
-    font-size: x-large;
-  }
-  
-  .have-account-title{
-    color: rgb(46, 45, 45);
-    margin: 3% auto;
-    text-align: center;
-  }
-  
-  .register-signin-redirect-button{
-    margin-bottom: 0;
-    font-size: x-large;
-    background-color: rgb(0, 146, 12);
-    border: none;
-    color: rgb(231, 231, 231);
-    padding: 5%;
-  }
-  
-  .register-signin-redirect-button:hover, .register-submit-button:hover{
-    background-color: rgb(0, 90, 8);
-    cursor: pointer;
-  }
+/* .register-input-container {
+  padding: 0 0 0% 0;
+} */
+
+.register-signin-container {
+  width: 50%;
+  /* padding: 0 0 5% 0; */
+  margin: 6% 0;
+}
+
+.register-left-container {
+  width: 50%;
+  /* height: 100%; */
+  background-image: url();
+  top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(237, 250, 234);
+}
+
+.left-container-content p {
+  font-style: normal;
+  font-size: 23px;
+  text-align: left;
+}
+
+.left-container-content {
+  margin: 3%;
+}
+
+.register-input-style {
+  width: 70%;
+  border: none;
+  border-bottom: solid rgb(0, 146, 12) 1px;
+  font-size: x-large;
+  display: block;
+  margin: 7% auto;
+  background-color: rgb(231, 231, 231);
+  outline: none;
+}
+
+.register-title {
+  text-align: center;
+  color: rgb(0, 146, 12);
+  padding: 5% 3% 5% 3%;
+}
+
+.register-submit-button {
+  display: block;
+  margin: 5% auto 8% auto;
+  background-color: rgb(0, 146, 12);
+  color: rgb(231, 231, 231);
+  padding: 3%;
+  font-size: x-large;
+  border-radius: 5%;
+}
+
+.have-account-title {
+  color: rgb(46, 45, 45);
+  margin: 3% auto;
+  text-align: center;
+}
+
+.register-signin-redirect-button {
+  display: block;
+  margin: 5% auto 8% auto;
+  font-size: x-large;
+  background-color: rgb(0, 146, 12);
+  color: rgb(231, 231, 231);
+  padding: 6.2% 8.7%;
+  border-radius: 5%;
+}
+
+.register-signin-redirect-button:hover,
+.register-submit-button:hover {
+  background-color: rgb(0, 90, 8);
+  cursor: pointer;
+}

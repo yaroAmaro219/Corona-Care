@@ -37,8 +37,10 @@ export default class Home extends Component {
                 </div>
           </div>
         
-        <div class="volunteer-container">
-            <h1>Our volunteers can help with...</h1>
+          <div class="volunteer-container">
+            <div class="home-volunteer-title">
+              <h1>Our volunteers can help with...</h1>
+              </div>
             <div class="pics-container">
             <div class="pics">
               <svg class="vol" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">

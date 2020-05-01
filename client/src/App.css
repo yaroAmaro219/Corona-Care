@@ -30,7 +30,7 @@ svg {
 p {
   font-family: poppins;
   font-size: 20px;
-  font-style: italic;
+  margin: 0;
 }
 
 h3 {
@@ -104,11 +104,7 @@ input[type=password] {
 
 }
 
-.profileimg {
-  display: flex;
-  flex-direction: row;
-  margin: 0px 5px 0 0;
-}
+
 
 .link-profile {
   display: flex;

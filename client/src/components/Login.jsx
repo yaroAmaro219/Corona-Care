@@ -28,7 +28,7 @@ const Login = (props) => {
         
         <div className='right-container'>
           <div className="need-account">
-            <h1 className='account-title' >NEED AN ACCOUNT?</h1>
+            <h1 className='account-title' >Need An Account?</h1>
             <button onClick={() => { props.history.push('/register') }} className='register-button'>Register</button>
           </div>
         </div>

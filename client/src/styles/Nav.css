@@ -20,6 +20,12 @@
   display: inline-block;  
 }
 
+.profileimg {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 5px 15px 0;
+}
+
 div.nav {
   display: flex;
   justify-items: center;
@@ -47,6 +53,7 @@ div.nav {
 /* Dropdown Button */
 .dropbtn {
   padding: 12px;
+  margin: 20px 0 20px 0;
   font-size: 16px;
   border: none;
   text-decoration: none;

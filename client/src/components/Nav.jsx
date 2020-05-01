@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Logo from '../images/CoCare.svg'
+import Logo from '../images/CoCarel.svg'
 
 class Nav extends Component {
   constructor(props) {
@@ -9,8 +9,6 @@ class Nav extends Component {
     }
   }
   render() {
-    console.log(this.props.user)
-    console.log(this.props.currentUser)
     return (
       <div>
         <nav>

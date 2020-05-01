@@ -8,16 +8,25 @@ const Register = (props) => {
   return (
     <>
     <div className='register-main-container'>
-
-<div className='register-left-container'>
-        <h1>We're committed to helping thos in need...</h1>
-        <p>Helping others is helping oneself, it's the oldest truth in the world.</p>
-        <br />
-        <p>Enter your information and we'll match you with those in need in your area.</p>
+        <div className='register-left-container'>
+          <div className="register-title">
+            <h1>We're committed to helping those in need...</h1>
+          </div>
+          <div class="left-container-content">
+            <div class="top">
+          <p>Helping others is helping oneself, it's </p>
+              <p>the oldest truth in the world.</p>
+              </div>
+         <div class="bottom">
+          <p>Enter your information and we'll </p>
+          <p>match you with those in need in your </p>
+              <p>area.</p>
+              </div>
+          </div>
         <div className='register-signin-container'>
         <h1 className='have-account-title'>Already have an account?</h1>
-        <button className='register-signin-redirect-button' onClick={() => { props.history.push('/login') }}>Sign In</button>
-      </div>
+          <button className='register-signin-redirect-button' onClick={() => { props.history.push('/login') }}>Sign In</button>
+          </div>
       </div>
 
       <form className="register-right-container" onSubmit={handleRegister}>

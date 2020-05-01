@@ -26,6 +26,7 @@
   background-color: rgb(75, 1, 195);
   border: none;
   color: rgb(231, 231, 231);
+  border-radius: 5%;
 }
 
 .register-button:hover,
@@ -72,4 +73,5 @@
   width: 40%;
   height: 12%;
   font-size: x-large;
+  border-radius: 5%;
 }
