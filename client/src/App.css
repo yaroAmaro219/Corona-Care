@@ -1,6 +1,7 @@
 div.app {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   text-align: center;
+  font-family: Poppins;
 }
 
 div.decision {
@@ -29,20 +30,17 @@ svg {
 
 p {
   font-family: poppins;
-  font-size: 20px;
   margin: 0;
 }
 
 h3 {
   font-family: Poppins;
-  font-size: 30px;
-  margin: 0;
+  font-size: 3vw;
+  margin: 3%;
+  padding: 2%;
 }
 
-.image {
-  padding: 2%;
-  margin: 2%;
-}
+
 
 
 
@@ -62,10 +60,6 @@ h3 {
   margin: 7%;
 }
 
-.text-container {
-  background: black;
-}
-
 .login {
   display: flex;
   flex-direction: column;
@@ -78,6 +72,10 @@ h3 {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+a{ 
+  margin: 0;
 }
 
 /* input[type=text],
@@ -98,22 +96,13 @@ input[type=password] {
   font-size: 25px;
 }
 
-.text-container {
-  /* background: linear-gradient(black, grey); */
-  background: black;
-
-}
-
-
-
-.link-profile {
-  display: flex;
-  flex-direction: row;
-}
-
+/* body {
+  position: absolute;
+ } */
 
 .route {
-  flex: 1 0 auto;
+  /* flex: 1 0 auto; */
+  width: 100%;
 }
 
 .pic {
@@ -124,20 +113,12 @@ input[type=password] {
   padding: 0;
 }
 
-/* body {
-  display: flex;
-  flex-direction: column;
-}
 
 html {
   height: 100%;
-} */
-
-
-.nav>a {
-  margin: 20px;
-  text-decoration: none;
+  width: 100%;
 }
+
 
 a:-webkit-any-link {
   cursor: pointer;

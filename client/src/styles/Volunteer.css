@@ -5,41 +5,35 @@
 }
 
 .volunteer-input {
-  font-family: Avenir;
+  font-family: Poppins;
   width: 70%;
   outline: none;
   border-bottom: solid rgb(0, 146, 12) 1px;
-  font-size: x-large;
+  font-size: 2.5vw;
   font-weight: light;
   display: block;
   margin: 3.5% auto;
- height: 45px;
+ height: 5vw;
  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
 
 .volunteer-title {
-  font-size: 50px;
-  font-family: Avenir;
+  font-size: 5vw;
+  font-family: Poppins;
 letter-spacing: .02em;
 font-weight: 500;
 }
 
 .volunteer-submit {
+  background-color: rgb(0, 146, 12);
+  color: rgb(231, 231, 231);
+  padding: 3% 5%;
+  font-size: 3vw;
+  border-radius: 5%;
   text-decoration: none;
-  font-family: poppins;
-    display: block;
-    text-align: center;
-    background-color: rgb(0, 146, 12);
-    color: rgb(231, 231, 231);
-    width: 40%;
-    padding: 2%;
-    font-size: x-large;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10%;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  margin: 3vw auto 5vw auto;
 }
 
 .volunteer-left-container {
@@ -54,14 +48,14 @@ font-weight: 500;
 }
 
 .volunteer-left-content {
-  font-size: 25px;
+  font-size: 3vw ;
   font-style: normal;
   font-family: poppins;
   margin: 0.5% 0 0 0;
 }
 
 .volunteer-content-container-left {
-  padding: 15% 0 0 0;
+ padding: 1vw 0 0 0 ;
 }
 
 .volunteer-content-container-right {
@@ -69,8 +63,12 @@ font-weight: 500;
   
 }
 
+.volunteer-left-co-container {
+  margin: 4vw;
+}
+
 .top {
-  margin: 0 0 15% 0;
+  margin: 0 0 7.5% 0;
 }
 
 .bottom {
@@ -78,12 +76,14 @@ font-weight: 500;
 }
 
 .volunteer-right-corner {
+  
+}
 
+.volunteer-header-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .volunteer-header {
-  padding: 5% 0 0 0;
-  margin: 1% 0 0 0;
-  display: flex;
-  flex-direction: column;
+  font-size: 4vw;
 }

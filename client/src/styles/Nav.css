@@ -1,40 +1,55 @@
 .header {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   padding: 0;
   align-items: center;
   justify-content: space-between;
+  margin: 1%;
 }
 
 .top-logo {
-  margin: 20%;
+  height: 80%;
+  width: 70%;
 }
 
 .link-profile {
   text-decoration: none;
+  margin: 3%;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  margin: 2vw 3.5vw;
+  font-size: 2.5vw;
 }
 
 .dropdown {
-  margin: 20px;
-  display: inline-block;  
+  margin: 2vw 3.5vw;
+  display: inline-block;
+  flex-direction: row;
 }
 
 .profileimg {
   display: flex;
   flex-direction: row;
-  margin: 0px 5px 15px 0;
+  margin: 0 .5vw 0 0;
+  width: 2vw;
 }
 
-div.nav {
-  display: flex;
-  justify-items: center;
-}
 
 .nav {
   display: flex;
-  padding: 0 2% 0 0;
+  margin-left: auto;
 }
+
+
+/* .nav>a {
+  margin: 3% 5%;
+  text-decoration: none;
+} */
+
 
 .header-logo {
   position: absolute;
@@ -47,22 +62,36 @@ div.nav {
 .home {
   display: flex;
   flex-direction: row;
+  font-size: 3vw;
 }
 
+.link-profile {
+  display: flex;
+  flex-direction: row;
+  padding: 0 5% 0 0;
+}
+
+.user-name-nav {
+  font-size: 2.5vw;
+}
 
 /* Dropdown Button */
 .dropbtn {
-  padding: 12px;
-  margin: 20px 0 20px 0;
-  font-size: 16px;
+  font-size: 2.5vw;
   border: none;
   text-decoration: none;
+  background-color: transparent;
+  margin: 3% 5%;
+  display: flex;
+  flex-direction: row;
+  font-family: Poppins;
 }
 
 /* The container <div> - needed to position the dropdown content */
-/* .dropdown {
-  display: inline-block;
-} */
+.arrow {
+  width: 1vw;
+  padding: .5vw;
+}
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {

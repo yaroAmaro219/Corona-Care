@@ -1,14 +1,19 @@
 h1 {
-  font-size: 35px;
   font-family: poppins;
-  margin: 0 0.5%;
   font-weight: normal;
+  line-height: normal;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
 }
 
 
+
 .meet {
-  background: whitesmoke;
-  padding: 5% 9% 5% 9%;
+  background: white;
+  padding: 2% 4% 5% 4%;
   justify-content: center;
 }
 
@@ -17,33 +22,35 @@ h1 {
   margin-right: auto;
 }
 
+.home-volunteer-title-container {
+  padding: 7% 0 0 7%;
+}
+
 .home-volunteer-title {
-  padding: 5% 0 0 0;
+  font-size: 3.5vw;
+  font-family: Poppins;
+  margin: 0;
 }
 
 .top-img {
   position: absolute;
-  z-index: -1;
-  width: 1500px;
-  /* height: 741px; */
-  top: 120px;
-  left: 0;
-  background-size: cover;
-  /* margin-left: auto; */
-  padding: 0;
-  margin: 0;
+  height: 53vw;
+  width: 100%;
+}
+
+.meet-title-container {
+  margin: 5% auto;
+}
+
+.meet-title {
+  font-family: Poppins;
+  font-size: 3.5vw;
 }
 
 .buttons {
-  /* margin-left: auto;
-  margin-right: auto; */
-  /* margin: 1%; */
-  /* padding: 2%; */
-  position: absolute;
-  width: 800px;
-  height: 134px;
-  left: 350px;
-  top: 725px;
+  position: relative;
+  top: 27vw;
+
 }
 
 .choice {
@@ -52,61 +59,61 @@ h1 {
   color: white;
   text-decoration: none;
   margin: 5%;
-  top: 10px;
-  padding: 3% 5%;
+  padding: 2% 4%;
   border-radius: 5%;
   font-weight: bold;
+  font-size: 2.5vw;
 }
 
 .choice:hover {
-  background: rgb(1, 78, 155);
+  background: #064B94;
 }
 
+.text-container {
+  display: flex;
+  flex-direction: column;
+  height: 53vw;
+}
 
 
 .text-1 {
-  position: absolute;
-  width: 853px;
-  height: 135px;
-  left: 72px;
-  top: 484px;
-
+  position: relative;
+  width: 80%;
+  top: 20vw;
   font-family: Poppins;
   font-style: normal;
-  font-weight: 300;
-  font-size: 54px;
-  line-height: 64px;
-  /* or 119% */
+  font-weight: lighter;
+  font-size: 5vw;
   letter-spacing: 0.002em;
   color: #FFFFFF;
+  line-height: .9em;
+  text-align: left;
+  left: 3vw;
 }
 
 .text-2 {
-  position: absolute;
-  width: 800px;
-  height: 134px;
-  left: 75px;
-  top: 600px;
-
+  left: 3vw;
+  position: relative;
+  width: 70%;
+  top: 24vw;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 32px;
-  /* or 160% */
+  font-size: 2vw;
+  line-height: 140%;
   letter-spacing: 0.002em;
-
   color: #FFFFFF;
+  text-align: left;
 }
 
 .vol {
-  margin: 1% 4%;
-  padding: 2%;
+  margin: 0 4%;
+  padding: 0 3%;
 }
 
 .volunteer-container {
   background: rgb(213, 245, 205);
-  width: 1500px;
+  /* width: 100%; */
   background-size: cover;
   display: flex;
   flex-direction: row;
@@ -114,21 +121,22 @@ h1 {
 
 .volunteer-container {
   left: 0;
-  position: absolute;
+  width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
   /* width: 853px;
   height: 135px; */
-  background: rgb(238, 252, 235);
+  background: rgb(241, 250, 239);
   background-size: cover;
-  top: 860px;
+  /* top: 200%; */
   margin: 0;
   padding: 0;
   font-family: Poppins;
   font-style: normal;
   font-weight: 300;
-  font-size: 54px;
-  line-height: 64px;
+  font-size: 4vw;
+  line-height: 2vw;
   /* or 119% */
   letter-spacing: 0.002em;
 
@@ -142,44 +150,80 @@ h1 {
 .pics-container {
   display: flex;
   flex-direction: column;
+  margin: 0 2vw 2vw 2vw;
 }
 
 .pics {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-left: 5vw;
+  height: 15vw;
 }
 
 .sub-pic {
   display: flex;
   flex-direction: row;
-  width: 1500px;
   justify-content: center;
   padding: 0;
   margin: 0 2% 5.7% 2%;
+  width: 100%;
 }
 
 .sub-option {
   display: flex;
+  width: 17%;
   flex-direction: row;
-  font-size: 20px;
-  margin: 0 35px 15px 35px;
+  font-size: 1.7vw;
+  margin: 1vw 4vw 1vw 2vw;
+  font-family: Poppins;
+}
+
+.image {
+  position: relative;
+  margin: 2%;
+  padding: 2%;
+  width: 17vw;
 }
 
 .bio {
   display: flex;
   flex-direction: column;
-  width: 33.33%;
-  /* margin-left: auto;
-  margin-right: auto; */
+  margin: 0 4vw;
   align-items: center;
 }
 
 .showcase {
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 }
 
 .quote {
-  width: 60%;
-  line-height: 80%;
+  font-size: 1.5vw;
+  font-style: italic;
+  line-height: 160%;
+  font-family: Open Sans;
+  margin-top: 1vw;
+}
+
+@media screen and (max-width: 500px) {
+  .text-container {
+    height: 65vw;
+  }
+
+  .top-logo {
+    height: 60%;
+    width: 60%;
+    margin: 2%;
+  }
+
+  /* body {
+    position: absolute;
+  } */
+
+  .top-img {
+    width: 100%;
+    height: 65vw;
+  }
 }

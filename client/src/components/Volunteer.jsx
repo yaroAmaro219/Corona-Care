@@ -7,9 +7,9 @@ const Volunteer = (props) => {
     <>
     <div class="volunteer-signup-container">
         <div class="volunteer-left-container">
-          <div class="volunteer-header">
-          <h1>We're committed to </h1>
-            <h1>helping those in need...</h1>
+          <div class="volunteer-left-co-container">
+          <div class="volunteer-header-container">
+          <h1 class="volunteer-header">We're committed to helping those in need...</h1>
             </div>
           <div class="volunteer-content-container-left">
             <div class="top">
@@ -23,7 +23,7 @@ const Volunteer = (props) => {
           <p class="volunteer-left-content">area.</p>
             </div>
             </div>
-            
+            </div>
       </div>
         <div class="volunteer-right-container">
           <div class="volunteer-header">
@@ -36,10 +36,11 @@ const Volunteer = (props) => {
           <input class="volunteer-input" placeholder="First Name" name="first_name" type="text" onChange={props.handleChange} />
           <input class="volunteer-input" placeholder="Last Name" name="Last Name" type="text" onChange={props.handleChange} />
             <input class="volunteer-input" placeholder="Email" name="email" type="text" onChange={props.handleChange} />
-          <input class="volunteer-input" placeholder="Password" name="password" type="text" onChange={props.handleChange} />
+          <input class="volunteer-input" placeholder="Password" name="password" type="password" onChange={props.handleChange} />
             <input class="volunteer-input" placeholder="Address" name="address" type="text" onChange={props.handleChange} />
           <input class="volunteer-input" placeholder="ZIP" name="zip" type="text" onChange={props.handleChange} />
-          <input class="volunteer-input" placeholder="Phone Number" name="phone" type="text" onChange={props.handleChange} />
+              <input class="volunteer-input" placeholder="Phone Number" name="phone" type="text" onChange={props.handleChange} />
+              <br />
           <Link class="volunteer-submit" to="/posts">Submit</Link>
             </form>
             </div>

@@ -173,6 +173,7 @@ class App extends Component {
     // console.log(this.state.user)
     return (
       <div class="app">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'/>
         <Nav
           currentUser={this.state.currentUser}
           handleLogin={this.handleLogin}
