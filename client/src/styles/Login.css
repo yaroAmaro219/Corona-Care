@@ -10,7 +10,7 @@
 }
 
 .need-account {
-  margin: 11% 0 0 0;
+  margin: 2vw 0 0 0;
 }
 
 .left-container {
@@ -41,6 +41,7 @@
 .account-title {
   color:rgb(75, 1, 195);
   margin: 3% auto;
+  font-size: 2.5vw;
 }
 
 
@@ -49,6 +50,7 @@
   color: rgb(75, 1, 195);
   margin: 5% 0;
   text-align: center;
+  font-size: 2.5vw;
 }
 
 .input-style {
