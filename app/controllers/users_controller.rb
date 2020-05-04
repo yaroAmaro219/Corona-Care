@@ -14,6 +14,11 @@ class UsersController < ApplicationController
     render json: @user
   end
 
+  def user_posts
+    @user = User.find(params[:user_id])
+    @posts = @user.posts
+  end
+
   # POST /users
   def create
     @user = User.new(user_params)

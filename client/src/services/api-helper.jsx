@@ -9,8 +9,13 @@ const api = axios.create({
 });
 
 export const showUser = async () => {
-  // const resp = await api.get('/users')
-  // return resp.data
+  const resp = await api.get(`/home`)
+  return resp.data
+}
+
+export const showUserItem = async (id) => {
+  const resp = await api(`/users/${id}`)
+  return resp.data
 }
 
 // ============ POST ============
@@ -25,13 +30,18 @@ export const showPost = async () => {
   return resp.data
 }
 
+export const showPersonalPost = async (id) => {
+  const resp = await api.get(`/profile/${id}`)
+  return resp.data
+}
+
 export const putPost = async (id, postData) => {
-  const resp = await api.put(`/posts/${id}`, { post: postData })
+  const resp = await api.put(`/users/:id/posts/${id}`, { post: postData })
   return resp.data
 }
 
 export const destroyPost = async (id) => {
-  const resp = await api.delete(`/users/:user_id/posts/${id}`)
+  const resp = await api.delete(`/users/:id/posts/${id}`)
   return resp.data
 }
 
@@ -66,6 +76,6 @@ export const removeToken = () => {
 }
 
 export const removeItem = () => {
-  
+
 }
 

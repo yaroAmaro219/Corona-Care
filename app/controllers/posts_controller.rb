@@ -9,17 +9,20 @@ class PostsController < ApplicationController
     render json: @posts
   end
 
-  # # GET /posts/1
-  # def show
-  #   render json: @post
-  # end
+  # GET /posts/1
+  def show
+    user = User.find(params[:id])
+    post = Post.find_by_id(params[:user_id])
+
+    render json: user, include: :posts
+  end
 
   # POST /posts
   def create
     user = User.find(params[:user_id])
     post = Post.new(post_params)
-    post.user = user
-    post.user = @current_user
+    # post.user = user
+    # post.user = @current_user
     if post.save!
       render json: user, include: :posts
     else

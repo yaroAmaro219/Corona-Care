@@ -5,15 +5,14 @@
 
 .title-container {
   margin-left: 3%;
-
 }
 
 .title {
-  font-size: 40px;
+  font-size: 5vw;
   font-family: Avenir;
   font-weight: 450;
   text-align: left;
-  padding: 0 0 2% 0;
+  margin: 0;
 }
 
 .gethelp-type {
@@ -24,29 +23,20 @@
   margin-top: auto;
 }
 
-/* .gethelp-type input {
-  margin: 0 2%;
-}
-
-.gethelp-type-input {
-  width: 200px;
-  height: 200px;
-} */
-
 .sub-title {
-  font-size: 20px;
-  font-family: Avenir;
+  font-size: 3vw;
+  font-family: Poppins;
   font-weight: 450;
   text-align: left;
-  padding: 7% 0 2% 0;
+  margin: 3vw 0;
 }
 
 .sub-sub-title {
-  font-size: 20px;
-  font-family: Avenir;
+  font-size: 3vw;
+  font-family: Poppins;
   font-weight: 450;
   text-align: left;
-  padding: 0 0 0 2%; 
+  padding: 0 0 0 2%;
   align-items: center;
 }
 
@@ -59,7 +49,8 @@
 .gethelp-contact-input {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
+  margin: auto 2vw;
 }
 
 .gethelp-contact-input p {
@@ -69,10 +60,8 @@
 }
 
 .gethelp-options {
-  color: black;
   display: flex;
-  width: 100%;
-  margin: 0 0 0 2.5%;
+  width: 90%;
 }
 
 .gethelp-input-container {
@@ -90,15 +79,15 @@
   border: none;
   background-color: rgb(228, 228, 228);
   width: 90%;
-  height: 150px;
+  height: 15vw;
   padding: 1.5% 2%;
-  font-size: 20px;
-  font-family: Avenir;
+  font-size: 2.5vw;
+  font-family: Poppins;
   margin: 0 0 0 0;
 }
 
 .find-help-button {
-  background-color:rgb(89, 132, 250);
+  background-color: rgb(89, 132, 250);
   color: whitesmoke;
   padding: 2% 2%;
   border-radius: 5%;
@@ -106,12 +95,24 @@
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.4);
 }
 
+.option-text {
+  font-size: 2.5vw;
+  margin: 1vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .options {
   width: 20%;
 }
 
+
 .gethelp-option-button {
-  margin: 1% 2.5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  align-items: center;
+  margin: 1vw;
 }
 
 .gethelp-option-button a {
@@ -121,16 +122,16 @@
 .option-submit-button {
   display: flex;
   flex-direction: column;
-  height: 210px;
-  width: 210px;
+  height: 17vw;
+  width: 17vw;
   align-items: center;
-  margin: 5%;
+  margin: 2vw;
   text-align: center;
   background-color: rgb(237, 252, 224);
-  color: rgb(0, 146, 12);
-  padding: 30%;
-  font-size: x-large;
+  padding: 3vw;
+  font-size: 5vw;
   border: none;
+  fill: #5BB275;
   border-radius: 7%;
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.4);
 }
@@ -139,40 +140,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 210px;
-  width: 210px;
-  margin: 5%;
+  height: 17vw;
+  width: 17vw;
+  margin: 2vw;
   text-align: center;
   background-color: rgb(237, 252, 224);
-  color: rgb(0, 146, 12);
-  padding: 20% 40% 30% 40%;
-  font-size: x-large;
+  padding: 3vw;
+  font-size: 5vw;
+  fill: #5BB275;
   border: none;
   border-radius: 7%;
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.4);
 }
 
-.option-submit-button svg.vol:hover {
-  fill: white;
-}
 
 .option-submit-button-medical:hover {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   background-color: rgb(0, 146, 12);
   fill: rgb(237, 252, 224);
-  font-size: x-large;
-  border: none;
-  border-radius: 7%;
 }
 
-.vol:hover {
-  fill: white;
+.option-submit-button-medical:focus {
+  background-color: rgb(0, 146, 12);
+  fill: rgb(237, 252, 224);
 }
 
 .option-submit-button:hover {
+  background-color: rgb(0, 146, 12);
+  fill: rgb(237, 252, 224);
+}
+
+.option-submit-button:focus {
+  background-color: rgb(0, 146, 12);
+  fill: rgb(237, 252, 224);
+}
+
+/* .option-submit-button:active {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,5 +183,4 @@
   fill: rgb(237, 252, 224);
   color: rgb(237, 252, 224); 
   font-size: x-large;
-
-}
+} */

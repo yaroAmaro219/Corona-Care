@@ -18,5 +18,5 @@ class User < ApplicationRecord
   #     updated_at: updated_at
   #   }
   # end
-  has_many :posts
+  has_many :posts, dependent: :destroy
 end

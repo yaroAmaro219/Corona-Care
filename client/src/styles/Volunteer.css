@@ -39,6 +39,7 @@ font-weight: 500;
 .volunteer-left-container {
   background-color: rgb(232, 246, 248); 
   width: 50%;
+  top: 0;
 }
 
 .volunteer-right-container {

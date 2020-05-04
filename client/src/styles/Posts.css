@@ -1,0 +1,52 @@
+.post-container {
+ 
+}
+
+.like-button {
+  border: none;
+  border-radius: 5%;
+  background-color: #C7EEFF;
+  padding: 0 3vw;
+}
+
+.like-button:hover {
+  border: none;
+  background-color: rgb(9, 176, 247);
+}
+
+.like-button:focus{
+  border: none;
+  background-color: rgb(9, 176, 247);
+}
+
+.post-image {
+  height: 3.5vw;
+  width: 3.5vw;
+}
+
+.post-image-container {
+  position: absolute;
+  margin-left: .5vw;
+  
+}
+
+
+.post {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  justify-content: left;
+  align-items: left;
+  background-color: #FAFAFA;
+  text-transform: uppercase;
+  box-shadow: 0vw 8vw 16vw 0vw rgba(0, 0, 0, 0.2);
+  margin: 5vw auto;
+  height: 17vw;
+  width: 70%;
+  border-radius: 5%;
+}
+
+.post-text {
+  margin: 1vw;
+  font-size: 50%;
+}
