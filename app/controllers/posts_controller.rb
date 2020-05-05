@@ -19,7 +19,7 @@ class PostsController < ApplicationController
 
   # POST /posts
   def create
-    user = User.find(params[:user_id])
+    user = User.find_by_id(params[:user_id])
     post = Post.new(post_params)
     # post.user = user
     # post.user = @current_user

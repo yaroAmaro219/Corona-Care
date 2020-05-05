@@ -24,6 +24,7 @@ import './styles/Volunteer.css'
 import './styles/Contact.css'
 import './styles/Posts.css'
 import './styles/Profile.css'
+import './styles/UpdatePost.css'
 
 import {
   registerUser,
@@ -161,7 +162,7 @@ class App extends Component {
       content: '',
       user_id: ''
     }))
-    this.props.history.push('/profile/:id')
+    this.props.history.push(`/home`)
   }
 
   setPostForm = (name, user_id) => {
@@ -226,6 +227,14 @@ class App extends Component {
   
 
   handleChange = (e) => {
+    const value = e.target.value;
+    this.setState({
+      ...this.state,
+      [e.target.name]: value
+    })
+  } 
+  
+  handleClickChange = (e) => {
     const value = e.target.value;
     this.setState({
       ...this.state,
@@ -306,6 +315,8 @@ class App extends Component {
                 personalPost={this.state.personalPost}
                 deletePost={this.deletePost}
                 updatePost={this.updatePost}
+                user_id={this.state.user_id}
+                currentUser={this.state.currentUser}
             />
           )}/>
           <Route exact path="/contact" render={(props) => (

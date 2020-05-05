@@ -12,6 +12,7 @@
     "algoliasearch": "^4.2.0",
     "axios": "^0.19.2",
     "react": "^16.13.1",
+    "react-alert": "^7.0.0",
     "react-date-picker": "^8.0.1",
     "react-dom": "^16.13.1",
     "react-instantsearch-dom": "^6.4.0",

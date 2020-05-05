@@ -1,4 +1,66 @@
 .delete-button {
   height: 3vw;
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  cursor: pointer;
+  margin-top: 1vw;
+}
+
+.profile-post-name {
+  font-size: 2vw;
+  margin: .5vw;
+}
+
+.profile-post-image {
+  height: 4vw;
+  width: 4vw;
+  margin: .5vw;
+  align-items: flex-start;
+}
+
+
+.profile-post-title {
+  font-size: 1.5vw;
+  margin: .5vw;
+}
+
+.profile-post-content {
+  margin: .5vw;
+}
+
+.edit-button {
+  text-decoration: none;
+  font-size: 2vw;
+}
+
+.ud-buttons {
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 2vw;
+}
+
+.profile-top {
+  display: flex;
+  margin-left: auto;
   margin-right: auto;
+  align-items: center;
+  width: 70%;
+}
+
+.logout-button {
+  margin-left: auto;
+  background-color: transparent;
+  height: 3vw;
+  font-size: 1.5vw;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile-welcome {
+  padding: 0 7vw;
+  margin: 0;
+  font-size: 3vw;
 }

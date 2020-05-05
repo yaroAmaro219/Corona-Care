@@ -19,6 +19,8 @@ get 'users/:id/user_posts' => 'users#user_posts', :as => :custom_user_posts
   get '/home/:id', to: 'users#show'
   get '/profile/:id', to: 'posts#show'
   get '/posts/:id', to: 'posts#destroy'
+
+  put '/profile/:user_id/posts/:id', to: 'posts#update'
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
