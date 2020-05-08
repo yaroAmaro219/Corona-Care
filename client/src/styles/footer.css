@@ -20,7 +20,7 @@
 
 .footer-header {
   margin: 1.2vw 0;
-  font-size: 2vw;
+  font-size: 18px;
   display: flex;
   flex-direction: row;
   text-transform: uppercase;
@@ -29,14 +29,59 @@
 .co-care {
   margin: 1vw 0;
   padding: 0 4% 0 0;
-  font-size: 2vw;
+  font-size: 18px;
   margin-left: auto;
 }
 
 .social-s {
   padding: .5vw .5vw;
   margin: .5vw 1vw;
-  width: 3vw;
+  width: 27px;
   color: white;
   fill: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-container {
+    background-color: #7C7E81;
+    font-family: poppins;
+    color: white;
+  }
+  
+  .footer {
+    display:flex;
+    flex-direction: row;
+    padding: 2vw 2vw 3vw 2vw;
+  }
+  
+  .social {
+    padding: 0 2vw;
+    fill: white;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+  
+  .footer-header {
+    margin: 1.2vw 0;
+    font-size: 2vw;
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+  }
+  
+  .co-care {
+    margin: 1vw 0;
+    padding: 0 4% 0 0;
+    font-size: 2vw;
+    margin-left: auto;
+  }
+  
+  .social-s {
+    padding: .5vw .5vw;
+    margin: .5vw 1vw;
+    width: 3vw;
+    color: white;
+    fill: white;
+  }
 }

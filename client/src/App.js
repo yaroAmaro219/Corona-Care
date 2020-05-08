@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useRef } from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import Register from './components/Register'
@@ -13,7 +13,7 @@ import Nav from './components/Nav'
 import Submit from './components/Submit'
 import Posts from './components/Posts'
 import UpdatePost from './components/updatePost'
-import Footer from './components/Footer'
+
 import './styles/Login.css'
 import './styles/Register.css'
 import './styles/Nav.css'
@@ -25,6 +25,7 @@ import './styles/Contact.css'
 import './styles/Posts.css'
 import './styles/Profile.css'
 import './styles/UpdatePost.css'
+import './styles/Submit.css'
 
 import {
   registerUser,
@@ -78,7 +79,6 @@ class App extends Component {
         currentUser
       })
     }
-    // this.getUser();
   }
 
   getUser = async () => {
@@ -248,6 +248,8 @@ class App extends Component {
   // }
   
 
+
+
   render() {
     console.log(this.state.personalPost)
     console.log('name:', this.state.name)
@@ -255,6 +257,7 @@ class App extends Component {
     console.log('content:', this.state.content)
     console.log('user_id:', this.state.user_id)
     console.log('title:', this.state.title)
+    
     return (
       <div class="app">
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'/>
@@ -265,6 +268,7 @@ class App extends Component {
           formData={this.state.authFormData}
           user={this.state.user}
         />
+       
         <div class="route">
         <Switch>
           <Route exact path="/home" render={(props) => (

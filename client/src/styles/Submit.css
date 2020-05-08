@@ -1,0 +1,11 @@
+
+.main {
+  margin: 18px 18px;
+  padding: 9px 18px;
+}
+
+@media only screen and (max-width: 850px) {
+.submit-title {
+  font-size: 21px;
+}
+}

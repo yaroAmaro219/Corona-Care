@@ -1,16 +1,68 @@
 .questions-title {
-font-size: 5vw;
+font-size: 30px
 }
 
 .email-link {
-  font-size: 4vw;
+  font-size: 20px;
 }
 
 .email {
-  margin: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .large-svg {
-  height: 30vw;
-  width: 30vw;
+  height: 162px;
+  width: 162px;
 }
+
+.contact-container {
+/* align-items: center; */
+display: flex;
+flex-direction: column;
+}
+
+@media only screen and (max-width: 850px) {
+  .large-svg {
+    height: 108px;
+    width: 108px;
+  }
+
+  .contact-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .contact-content {
+      padding-left: 3px;
+      align-items: center;
+    display: flex;
+    flex-direction: column;
+    }
+
+  h2 {
+    margin: 0;
+  }
+
+  .email {
+    align-items: center;
+    display: flex;
+    flex-direction: column; 
+  }
+
+  .email-link {
+    font-size: 15px;
+  }
+
+  .questions-title {
+    font-size: 20px
+    }
+  }

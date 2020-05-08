@@ -22,7 +22,6 @@ export default class Home extends Component {
     return (
       <>
         <div class="home">
-
           <div class="text-container">
             <img
               src={Shopping}
@@ -47,9 +46,9 @@ export default class Home extends Component {
                 <Link class="choice" to=
                   {this.props.currentUser
                     ?
-                    "/volunteer"
+                    "/posts"
                     :
-                    "/register"}
+                    "/volunteer"}
                 >I want to help</Link>
               </div>
             </div>

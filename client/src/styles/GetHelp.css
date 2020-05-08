@@ -1,5 +1,4 @@
 .gethelp-main-container {
-  height: 100%;
   margin: 3%;
 }
 
@@ -8,11 +7,11 @@
 }
 
 .title {
-  font-size: 5vw;
+  font-size: 40px;
   font-family: Avenir;
   font-weight: 450;
   text-align: left;
-  margin: 0;
+  
 }
 
 .gethelp-type {
@@ -24,15 +23,15 @@
 }
 
 .sub-title {
-  font-size: 3vw;
+  font-size: 30px;
   font-family: Poppins;
   font-weight: 450;
   text-align: left;
-  margin: 3vw 0;
+  margin: 30px 0;
 }
 
 .sub-sub-title {
-  font-size: 3vw;
+  font-size: 20px;
   font-family: Poppins;
   font-weight: 450;
   text-align: left;
@@ -59,29 +58,31 @@
   margin: 1%;
 }
 
-.gethelp-options {
-  display: flex;
-  width: 90%;
+.button-container {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .gethelp-input-container {
   border: none;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5%;
+  margin-left: 36px;
+  margin-bottom: 18px;
 }
 
 .gethelp-form {
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  margin-bottom: 36px;
 }
 
 .gethelp-input {
   border: none;
   background-color: rgb(228, 228, 228);
-  width: 90%;
-  height: 15vw;
+  width: 80%;
+  height: 150px;
   padding: 1.5% 2%;
-  font-size: 2.5vw;
+  font-size: 20px;
   font-family: Poppins;
   margin: 0 0 0 0;
 }
@@ -89,15 +90,15 @@
 .find-help-button {
   background-color: rgb(89, 132, 250);
   color: whitesmoke;
-  padding: 2% 2%;
+  padding: 18px;
   border-radius: 5%;
   font-size: x-large;
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.4);
 }
 
 .option-text {
-  font-size: 2.5vw;
-  margin: 1vw;
+  font-size: 20px;
+  margin: 5px 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -106,62 +107,40 @@
   width: 20%;
 }
 
-
+.gethelp-options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 27px;
+  margin-top: 27px;
+}
 .gethelp-option-button {
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  align-items: center;
-  margin: 1vw;
+  margin: 0 1vw;
+  padding-left: 2vw;
+  text-align: center;
 }
 
 .gethelp-option-button a {
   width: 30%;
+  
 }
 
 .option-submit-button {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 17vw;
-  width: 17vw;
+  height: 170px;
+  width: 170px;
+  justify-content: center;
   align-items: center;
-  margin: 2vw;
+  margin: 10px;
   text-align: center;
   background-color: rgb(237, 252, 224);
-  padding: 3vw;
-  font-size: 5vw;
+  padding: 10px;
+  font-size: 20px;
   border: none;
   fill: #5BB275;
   border-radius: 7%;
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.4);
-}
-
-.option-submit-button-medical {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 17vw;
-  width: 17vw;
-  margin: 2vw;
-  text-align: center;
-  background-color: rgb(237, 252, 224);
-  padding: 3vw;
-  font-size: 5vw;
-  fill: #5BB275;
-  border: none;
-  border-radius: 7%;
-  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.4);
-}
-
-
-.option-submit-button-medical:hover {
-  background-color: rgb(0, 146, 12);
-  fill: rgb(237, 252, 224);
-}
-
-.option-submit-button-medical:focus {
-  background-color: rgb(0, 146, 12);
-  fill: rgb(237, 252, 224);
 }
 
 .option-submit-button:hover {
@@ -174,13 +153,176 @@
   fill: rgb(237, 252, 224);
 }
 
-/* .option-submit-button:active {
-  display: flex;
+@media only screen and (max-width: 850px) {
+  .gethelp-main-container {
+    height: 100%;
+    margin: 3%;
+  }
+
+  .title-container {
+    margin-left: 3%;
+  }
+
+  .title {
+    font-size: 5vw;
+    font-family: Avenir;
+    font-weight: 450;
+    text-align: left;
+    margin: 0;
+  }
+
+  .gethelp-type {
+    margin: 0 3%;
+    display: flex;
+    justify-items: center;
+    padding: 0 10%;
+    margin-top: auto;
+  }
+
+  .sub-title {
+    font-size: 3vw;
+    font-family: Poppins;
+    font-weight: 450;
+    text-align: left;
+    margin-bottom: 3vw;
+    margin-top: unset;
+  }
+
+  .sub-sub-title {
+    font-size: 3vw;
+    font-family: Poppins;
+    font-weight: 450;
+    text-align: left;
+    padding: 0 0 0 2%;
+    align-items: center;
+  }
+
+  .gethelp-contact {
+    margin: 0.1% 0 5% 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .gethelp-contact-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto 2vw;
+  }
+
+  .gethelp-contact-input p {
+    display: flex;
+    flex-direction: row;
+    margin: 1%;
+  }
+
+  .gethelp-options {
+    display: flex;
+    /* width: 90%; */
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
+  .gethelp-input-container {
+    border: none;
+    margin-right: auto;
+    margin-bottom: 5%;
+  }
+
+  .gethelp-form {
+    display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: rgb(0, 146, 12);
-  fill: rgb(237, 252, 224);
-  color: rgb(237, 252, 224); 
-  font-size: x-large;
-} */
+  }
+
+  .gethelp-input {
+    height: 81px;
+    width: 243px;
+    padding: 1.5% 2%;
+    font-size: 2.5vw;
+  }
+
+  .find-help-button {
+    background-color: rgb(89, 132, 250);
+    color: whitesmoke;
+    padding: 9px;
+    border-radius: 5%;
+    font-size: 15px;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.4);
+  }
+
+  .option-text {
+    font-size: 2.5vw;
+    margin: 1vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .options {
+    width: 20%;
+  }
+
+
+  .gethelp-option-button {
+    
+    margin: 1px;
+  }
+
+  .gethelp-option-button a {
+    width: 30%;
+  }
+
+  .option-submit-button {
+    display: flex;
+    flex-direction: column;
+    height: 17vw;
+    width: 17vw;
+    align-items: center;
+    margin: 2vw;
+    text-align: center;
+    background-color: rgb(237, 252, 224);
+    padding: 3vw;
+    font-size: 5vw;
+    border: none;
+    fill: #5BB275;
+    border-radius: 7%;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.4);
+  }
+
+  .option-submit-button-medical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 17vw;
+    width: 17vw;
+    margin: 2vw;
+    text-align: center;
+    background-color: rgb(237, 252, 224);
+    padding: 3vw;
+    font-size: 5vw;
+    fill: #5BB275;
+    border: none;
+    border-radius: 7%;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.4);
+  }
+
+
+  .option-submit-button-medical:hover {
+    background-color: rgb(0, 146, 12);
+    fill: rgb(237, 252, 224);
+  }
+
+  .option-submit-button-medical:focus {
+    background-color: rgb(0, 146, 12);
+    fill: rgb(237, 252, 224);
+  }
+
+  .option-submit-button:hover {
+    background-color: rgb(0, 146, 12);
+    fill: rgb(237, 252, 224);
+  }
+
+  .option-submit-button:focus {
+    background-color: rgb(0, 146, 12);
+    fill: rgb(237, 252, 224);
+  }
+}

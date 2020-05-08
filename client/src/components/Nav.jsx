@@ -33,14 +33,14 @@ class Nav extends Component {
               <div class="nav">
                 <nav class="nav">
                   <a class="link" href="/home">Home</a>
-                  <div class="dropdown">
+                  {/* <div class="dropdown">
                     <a class="dropbtn" href="#">USA <img class="arrow" src={Arrow} /></a>
                     <div class="dropdown-content">
                       <a href="#">German</a>
                       <a href="#">Russian</a>
                       <a href="#">French</a>
                     </div>
-                  </div>
+                  </div> */}
                   <a class="link" href="/contact">Contact</a>
                   {this.user().map(user => (
                     <Link class="link-profile" to={`/profile/${user}`}>
@@ -55,14 +55,14 @@ class Nav extends Component {
               <div class="nav">
                 <nav class="nav">
                   <a class="link" href="/home">Home</a>
-                  <div class="dropdown">
+                  {/* <div class="dropdown">
                     <button class="dropbtn">USA</button>
                     <div class="dropdown-content">
                       <a href="#">Germnay</a>
                       <a href="#">Russia</a>
                       <a href="#">France</a>
                     </div>
-                  </div>
+                  </div> */}
                   <a class="link" href="/contact">Contact</a>
                   <a class="link-profile" href="/login">
                     <svg class="profileimg" width="18" viewBox="0 0 16 18">

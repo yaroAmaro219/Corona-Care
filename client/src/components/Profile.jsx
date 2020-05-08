@@ -31,9 +31,7 @@ class Profile extends Component {
       this.props.personalPost.posts.map((post, index) => {
 
         return (
-
           <>
-
             <div class="post">
               <button class="like-button">
                 <svg width="8vw" height="8vw" viewBox="0 0 89 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,9 +92,8 @@ class Profile extends Component {
         )
       })
 
-
     return (
-      <div>
+      <div class="main">
         <div class="profile-top">
         <h1 class="profile-welcome">Hello {this.props.currentUser
           &&
